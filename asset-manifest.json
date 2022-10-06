@@ -1,9 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b381cc6a.css",
-    "main.js": "/portfolio/static/js/main.9a6940a0.js",
+    "main.css": "/portfolio/static/css/main.7288a7c3.css",
+    "main.js": "/portfolio/static/js/main.462dba2e.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
-    "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.9b888f29c7eecf16f392.svg",
+    "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
     "static/media/tianyi-ma.png": "/portfolio/static/media/tianyi-ma.5b0300c11456b04d2cb3.png",
     "static/media/pexels-alexander-grey-1209843.png": "/portfolio/static/media/pexels-alexander-grey-1209843.774e2bae508cebfc2f1a.png",
@@ -16,28 +16,28 @@
     "static/media/reactjs.png": "/portfolio/static/media/reactjs.35639ed930462bfcd544.png",
     "static/media/sass.png": "/portfolio/static/media/sass.91714f748188b46f4e33.png",
     "static/media/reactnative.png": "/portfolio/static/media/reactnative.86c8d9eba03e29814d2a.png",
-    "static/media/responsive.svg": "/portfolio/static/media/responsive.89f60029cfdcb5daa44f9115ba1763c2.svg",
-    "static/media/collab.svg": "/portfolio/static/media/collab.31f81c13b6b371c0d393563bbd3ab729.svg",
+    "static/media/responsive.svg": "/portfolio/static/media/responsive.949f43359a33e2eb980ad8f25ef9aca6.svg",
+    "static/media/collab.svg": "/portfolio/static/media/collab.9d12dffdfdd949fc079bc679d5c8ee0f.svg",
     "static/media/wordpress.jpg": "/portfolio/static/media/wordpress.3ae55159a3b320c458c4.jpg",
-    "static/media/header-04.svg": "/portfolio/static/media/header-04.f5ee181ad8c9ba46d0fffbe79976abbf.svg",
-    "static/media/frameworks.svg": "/portfolio/static/media/frameworks.f2fb71242c0700f5993172cd4b7fa3e1.svg",
-    "static/media/header-03.svg": "/portfolio/static/media/header-03.efd1fafe09852f32efb3c9bada3e9b9e.svg",
+    "static/media/header-04.svg": "/portfolio/static/media/header-04.44a5c47e20cdf9c4f7b89568bf77013f.svg",
+    "static/media/frameworks.svg": "/portfolio/static/media/frameworks.82cca21882c3ae7df33c8792a464a2fd.svg",
+    "static/media/header-03.svg": "/portfolio/static/media/header-03.7093dc2f320c5ad130fffe9aa0669d30.svg",
     "static/media/figma.png": "/portfolio/static/media/figma.72fbc535ebe253a5dbc4.png",
     "static/media/photoshop.png": "/portfolio/static/media/photoshop.047cad202c4a70579aa2.png",
     "static/media/html.png": "/portfolio/static/media/html.cfb2ba4a6b1c3de295bc.png",
     "static/media/bootstrap.png": "/portfolio/static/media/bootstrap.268c4375260420e8d982.png",
     "static/media/css.png": "/portfolio/static/media/css.4a6549b8c2b4cda8bb88.png",
+    "static/media/header-02.svg": "/portfolio/static/media/header-02.ea21ace4da7c8d0a1be14e330e5620ca.svg",
     "static/media/illustrator.png": "/portfolio/static/media/illustrator.be2c11a35d886eeda681.png",
-    "static/media/header-02.svg": "/portfolio/static/media/header-02.6e0f2a1ffd5862b5ac2191d9bc3fa2f4.svg",
     "static/media/js.png": "/portfolio/static/media/js.3dfb665e058d08c99f28.png",
-    "static/media/header-01.svg": "/portfolio/static/media/header-01.7e3dfa7506cbf3cda39738bdc45dbd0f.svg",
+    "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "index.html": "/portfolio/index.html",
-    "main.b381cc6a.css.map": "/portfolio/static/css/main.b381cc6a.css.map",
-    "main.9a6940a0.js.map": "/portfolio/static/js/main.9a6940a0.js.map",
+    "main.7288a7c3.css.map": "/portfolio/static/css/main.7288a7c3.css.map",
+    "main.462dba2e.js.map": "/portfolio/static/js/main.462dba2e.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.b381cc6a.css",
-    "static/js/main.9a6940a0.js"
+    "static/css/main.7288a7c3.css",
+    "static/js/main.462dba2e.js"
   ]
 }
