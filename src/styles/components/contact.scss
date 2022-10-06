@@ -1,0 +1,86 @@
+.contact {
+  // height: calc(100vh - 75px);
+  width: 100%;
+  background-color: $secondary;
+  padding: 100px 5%;
+  @include sp {
+    padding: 80px 5%;
+    height: 100vh;
+  }
+  
+  &__container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+  }
+
+  &__form {
+    max-width: 1400px;
+    width: 100%;
+    margin: 0 auto;
+
+    &-items {
+      max-width: 900px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 20px auto;
+      width: 100%;
+      @include sp {
+        flex-direction: column;
+        justify-content: flex-start;
+      }
+
+      label {
+        min-width: 150px;
+        font-size: 18px;
+        color: $text;
+        font-weight: 700;
+        @include sp {
+          width: 100%;
+          margin-bottom: 10px;
+        }
+
+        &.start {
+          align-self: flex-start;
+          margin-top: 25px;
+          @include sp {
+            margin-top: 0;
+          }
+        }
+      }
+
+      input, textarea {
+        max-width: 700px;
+        width: 100%;
+        outline: none;
+        padding: 20px ;
+        font-size: 18px;
+        font-weight: 100;
+        color: $text;
+        border: 1px solid transparent;
+        transition: ease 0.2s;
+
+        &:focus, &:hover {
+          box-shadow: 5px 5px 0 $primary;
+          transition: ease 0.2s;
+          border: 1px solid $primary;
+          transition: ease 0.2s;
+        }
+      }
+
+      textarea {
+        resize: none;
+      }
+    }
+  }
+
+  &__button-wrapper {
+    justify-content: center;
+    align-items: center;
+    display: flex;
+    margin-top: 50px;
+    width: 100%;
+  }
+}

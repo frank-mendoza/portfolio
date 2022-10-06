@@ -1,0 +1,15 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.slider-container {
+  width: 100%;
+  background-color: $slider;
+  height: 5px;
+
+  .slider {
+    width: 0;
+    height: 100%;
+    border-radius: 20px;
+    background-color: $primary;
+  }
+}

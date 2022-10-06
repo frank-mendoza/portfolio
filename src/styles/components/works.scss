@@ -1,0 +1,147 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.works {
+  max-width: 1400px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 100px 0 50px;
+  overflow: hidden;
+  @include mx1400 {
+    padding: 80px 5% 20px;
+  }
+
+  &__tablinks {
+    width: 50%;
+    margin: 0 auto;
+    position: relative;
+    @include sp {
+      width: 100%;
+    }
+
+    &::after {
+      background-color: $secondary;
+      content: '';
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: skew(-20deg) translate(10px, 15px);
+      z-index: -1;
+      top: 0;
+    }
+
+    &::before {
+      content: '';
+      background-color: $primary;
+      position: absolute;
+      height: 100%;
+      width: 100%;
+      transform: skew(-20deg) translate(-10px, 0);
+    }
+  }
+
+  &__filter {
+    position: relative;
+    text-align: center;
+    margin-bottom: 50px;
+    padding: 12px 0;
+
+    li {
+      display: inline-block;
+      padding: 0 15px;
+      font-size: 12px;
+      color: $text;
+      text-transform: uppercase;
+      cursor: pointer;
+      border-right: 1px solid $text;
+      transition: ease 0.2s;
+
+      &:last-child {
+        border-right: 0;
+      }
+
+      &:active,
+      &:hover {
+        transition: ease 0.2s;
+        color: $black;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    margin: 0 auto;
+    gap: 10px;
+    text-align: center;
+  }
+
+  &__item {
+    height: 300px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    flex: auto;
+    transition: ease 1s;
+
+    img {
+      object-fit: cover;
+      width: 100%;
+      height: 100%;
+      vertical-align: middle;
+      border-radius: 5px;
+    }
+  }
+
+  &__description {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    opacity: 0;
+    top: 0;
+    transition: ease 0.2s;
+
+    &:hover {
+      opacity: 1;
+      transition: ease 0.2s;
+    }
+
+    &::after {
+      content: '';
+      opacity: 0.8;
+      background-color: $primary;
+      height: 100%;
+      width: 100%;
+      position: absolute;
+      z-index: 0;
+    }
+  }
+
+  &__description-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: $text;
+    z-index: 1;
+    text-decoration: none;
+    margin-bottom: 10px;
+  }
+  
+  &__description-client {
+    color: $text;
+    font-size: 15px;
+    z-index: 1;
+  }
+  
+  &__button {
+    width: 100%;
+    margin: 30px auto 0;
+    display: flex;
+    justify-content: center;
+    text-decoration: none;
+  }
+}

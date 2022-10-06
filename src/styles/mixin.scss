@@ -1,0 +1,29 @@
+@mixin mx1400 {
+  @media screen and (max-width: 1400px) {
+    @content;
+  }
+}
+
+@mixin mx1200 {
+  @media screen and (max-width: 1200px) {
+    @content;
+  }
+}
+
+@mixin mx980 {
+  @media screen and (max-width: 980px) {
+    @content;
+  }
+}
+
+@mixin tablet {
+  @media screen and (max-width: 1200px) and (min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin sp {
+  @media screen and (max-width: 767px) {
+    @content;
+  }
+}

@@ -1,0 +1,58 @@
+.footer {
+  width: 100%;
+  overflow: hidden;
+
+  &__container {
+    width: 100%;
+    padding: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    background-color: $primary;
+    @include sp {
+      padding: 60px 5%;
+    }
+  }
+  
+  &__logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin-bottom: 20px;
+    
+    img {
+      width: 100px;
+    }
+  
+    p {
+      font-size: 20px;
+      color: $black;
+      font-weight: 700;
+      text-align: start;
+      line-height: 24px;
+      @include sp {
+        font-size: 16px;
+      }
+    }
+  }
+
+  &__links {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+    justify-content: center;
+    opacity: 0.8;
+    @include sp {
+      gap: 20px;
+    }
+  }
+
+  &__copyright {
+    font-size: 12px;
+    font-weight: 600;
+    color: $text;
+  }
+}

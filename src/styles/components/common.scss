@@ -1,0 +1,27 @@
+@import '../variables.scss';
+@import '../mixin.scss';
+
+.title {
+  color: $text;
+  font-size: 45px;
+  font-weight: 700;
+  text-align: center;
+  margin-bottom: 20px;
+  @include sp  {
+    font-size: 30px;
+  }
+}
+
+.swiper {
+  cursor: grab !important;
+}
+
+.swiper-pagination-bullet {
+  background-color: $primary !important;
+}
+
+.icons {
+  @include sp {
+    height: 30px;
+  }
+}
