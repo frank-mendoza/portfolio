@@ -129,7 +129,7 @@ function App() {
           contact={contact}
         />
         <Routes>
-          <Route path="/" element={
+          <Route path="/portfolio" element={
             <>
               <Home location={home} />
               <Works loading={loading} location={works} worksroute={false} onActiveTav={onActiveTav} tab={tab} />
@@ -138,7 +138,7 @@ function App() {
               <Footer />
             </>}
           />
-          <Route path="/works" element={<Works loading={loading} worksroute={true} onActiveTav={onActiveTav} tab={tab} />} />
+          <Route path="/portfolio/works" element={<Works loading={loading} worksroute={true} onActiveTav={onActiveTav} tab={tab} />} />
           <Route
             path="*"
             element={
