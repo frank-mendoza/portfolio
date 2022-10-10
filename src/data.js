@@ -1,55 +1,64 @@
+import sound from "./img/pexels-sound-on-3756879.png"
+import tranmautritam from "./img/pexels-tranmautritam-251225.png"
+import magda from "./img/pexels-magda-ehlers-1279813.png"
+import fauxels from "./img/pexels-fauxels-3183197.png"
+import thisisengineering from "./img/pexels-thisisengineering-3913025.png"
+import alexander from "./img/pexels-alexander-grey-1209843.png"
+import tianyi from "./img/tianyi-ma.png"
+import designecologist from "./img/designecologist.png"
+
 const data = [
   {
-    src: require("./img/pexels-sound-on-3756879.png"),
+    src: sound,
     alt: "pexels-sound-on-3756879",
     title: "Sample Website Title",
     client: "Client Project",
     type: 1
   },
   {
-    src: require("./img/pexels-tranmautritam-251225.png"),
+    src: tranmautritam,
     alt: "pexels-tranmautritam-251225",
     title: "Sample Website Title",
     client: "Client Project",
     type: 2
   },
   {
-    src: require("./img/pexels-magda-ehlers-1279813.png"),
+    src: magda,
     alt: "pexels-magda-ehlers-1279813",
     title: "Sample Website Title",
     client: "Client Project",
     type: 2
   },
   {
-    src: require("./img/pexels-fauxels-3183197.png"),
+    src: fauxels,
     alt: "pexels-fauxels-3183197",
     title: "Sample Website Title",
     client: "Client Project",
     type: 3
   },
   {
-    src: require("./img/pexels-thisisengineering-3913025.png"),
+    src: thisisengineering,
     alt: "pexels-thisisengineering-3913025",
     title: "Sample Website Title",
     client: "Client Project",
     type: 2
   },
   {
-    src: require("./img/pexels-alexander-grey-1209843.png"),
+    src: alexander,
     alt: "pexels-alexander-grey-1209843",
     title: "Sample Website Title",
     client: "Client Project",
     type: 3
   },
   {
-    src: require("./img/tianyi-ma.png"),
+    src: tianyi,
     alt: "tianyi-ma",
     title: "Sample Website Title",
     client: "Client Project",
     type: 3
   },
   {
-    src: require("./img/designecologist.png"),
+    src: designecologist,
     alt: "designecologist",
     title: "Sample Website Title",
     client: "Client Project",

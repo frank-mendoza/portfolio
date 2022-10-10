@@ -25,11 +25,13 @@ const Works = ({ onActiveTav, ...props }) => {
     } else {
       if (all) {
         return record.map((item, key) => {
+
+          let src = item.src
           
           return (
             <CustomItem
               key={key}
-              src={item.src}
+              src={src}
               alt={item.alt}
               title={item.title}
               client={item.client}
