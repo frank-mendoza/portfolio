@@ -33,19 +33,27 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
     <nav className='navbar'>
       <div className='navbar-nav'>
         <div className='navbar__wrapper'>
-          <Link className='navbar__logo' to={'/' } onClick={() => openSidebar()}>
+          <Link 
+            className='navbar__logo' 
+            // to={'/' } 
+            onClick={() => openSidebar()}
+          >
             <img src={navlogo} alt="logo" />
           </Link>
           <div className='navbar__link-wrapper'>
             <ul className="navbar__ul">
-              <Link to={'/'} className="navbar__links"
+              <Link 
+                // to={'/'} 
+                className="navbar__links"
                 onClick={() => toggleRoutes(true,)}
               >Home</Link>
-              <Link to={'/'}
+              <Link 
+                // to={'/'}
                 className="navbar__links"
                 onClick={() => toggleRoutes(false, works)}
               >Works</Link>
-              <Link to={'/'}
+              <Link 
+                // to={'/'}
                 className="navbar__links"
                 onClick={() => toggleRoutes(false, about)}
               >About</Link>
