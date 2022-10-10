@@ -100,7 +100,7 @@ const Works = ({ onActiveTav, ...props }) => {
 
   const showButton = () => {
     return  props.worksroute || data.length == 0 ? null :
-        <Link className="works__button" to='/works'>
+        <Link className="works__button" to='/portfolio/works'>
           <Button name='See all' onClick={null} />
         </Link>
 
