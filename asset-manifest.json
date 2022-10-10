@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.7288a7c3.css",
-    "main.js": "/portfolio/static/js/main.b2737f43.js",
+    "main.js": "/portfolio/static/js/main.c9742b74.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
@@ -33,11 +33,11 @@
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "index.html": "/portfolio/index.html",
     "main.7288a7c3.css.map": "/portfolio/static/css/main.7288a7c3.css.map",
-    "main.b2737f43.js.map": "/portfolio/static/js/main.b2737f43.js.map",
+    "main.c9742b74.js.map": "/portfolio/static/js/main.c9742b74.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.7288a7c3.css",
-    "static/js/main.b2737f43.js"
+    "static/js/main.c9742b74.js"
   ]
 }
