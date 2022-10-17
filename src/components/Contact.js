@@ -7,9 +7,8 @@ const Contact = ({ location }) => {
 
     <div className="contact" id='contact' ref={location}>
       <AnimationOnScroll 
-         
         className='contact__container' 
-        animateIn="animate__slideInUp"
+        animateIn="animate__fadeInUp"
         animateOnce={true}
         >
         <h2 className="title">Contact</h2>

@@ -11,7 +11,7 @@ const Footer = () => {
     <footer className='footer'>
       <div className="footer__container">
         <AnimationOnScroll
-          animateIn="animate__bounceInUp"
+          animateIn="animate__fadeInUp"
           animateOnce={true}
         >
 

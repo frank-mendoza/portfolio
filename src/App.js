@@ -125,6 +125,7 @@ function App() {
           works={works}
           toggle={toggle}
           about={about}
+          openSidebar={openSidebar}
           openToggle={() => setToggle(!toggle)}
           contact={contact}
         />

@@ -56,7 +56,7 @@ const About = ({ location }) => {
           animateOnce={true}
            
           className="about__container " 
-          animateIn="animate__bounceInUp">
+          animateIn="animate__fadeInUp">
 
           <div className="about__item">
             <img src={collab} alt="collab" />
@@ -77,8 +77,7 @@ const About = ({ location }) => {
         <Descriptions grid={false} src={responsive} animateIn="animate__bounceInRight" alt="responsive " title='Mobile Responsiveness' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
         
         <AnimationOnScroll 
-           
-          animateIn="animate__bounceInUp"
+          animateIn="animate__fadeInUp"
           animateOnce={true}
           >
           <div className="about__carousel">
@@ -115,17 +114,16 @@ const About = ({ location }) => {
         </AnimationOnScroll>
 
       </div>
-      <div className="about__wrapper">
-        <AnimationOnScroll 
-           
-          animateIn="animate__bounceInUp" 
-          className="about__contents"
-          animateOnce={true}
-          >
+      <AnimationOnScroll 
+        animateIn="animate__fadeInUp" 
+        animateOnce={true}
+        className="about__wrapper"
+      >
+        <div className="about__contents" >
           <h2 className="title">Connect with me</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos exercitationem, magni facilis molestias dicta numquam saepe temporibus sunt enim quibusdam tempore consequuntur placeat voluptatem architecto ad ut harum quo.</p>
-        </AnimationOnScroll>
-      </div>
+        </div>
+      </AnimationOnScroll>
     </>
   )
 }

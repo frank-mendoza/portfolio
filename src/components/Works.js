@@ -109,7 +109,7 @@ const Works = ({ onActiveTav, ...props }) => {
   return (
     <AnimationOnScroll
       initiallyVisible={true}
-      animateIn="animate__bounceInUp"
+      animateIn="animate__fadeInUp"
       animateOnce={true}
     >
 

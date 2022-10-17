@@ -25,6 +25,9 @@
     
     img {
       width: 100px;
+      @include sp {
+        width: 60px;
+      }
     }
   
     p {
