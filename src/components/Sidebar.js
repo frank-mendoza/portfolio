@@ -20,10 +20,10 @@ const Sidebar = ({ scrollToElement,openToggle, ...props }) => {
           <li className="sidebar__links" onClick={() => scrollToElement(true,)}>Home</li>
           <li className="sidebar__links" onClick={() => scrollToElement(false, props.works)}>Works</li>
           <li className="sidebar__links" onClick={() => scrollToElement(false, props.about)}>About</li>
-          <li className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>Contact</li>
+          {/* <li className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>Contact</li> */}
         </ul>
       </div>
-      <Button name='Send Message' secondary={true} />
+      <Button name='Send Message' secondary={true} onClick={() => scrollToElement(false, props.contact)}/>
       <MdClose onClick={() => openToggle()} size={20} style={{position: 'absolute', right: 20, top: 20 }}/>
     </div >
   )
