@@ -1,9 +1,10 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.fc6af29f.css",
-    "main.js": "/portfolio/static/js/main.a221ab86.js",
+    "main.css": "/portfolio/static/css/main.f8392990.css",
+    "main.js": "/portfolio/static/js/main.b7344613.js",
     "static/js/787.1ed0c42c.chunk.js": "/portfolio/static/js/787.1ed0c42c.chunk.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
+    "static/media/headerVideo.mp4": "/portfolio/static/media/headerVideo.ecbf02aa4cb6e5b79ffb.mp4",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
     "static/media/tianyi-ma.png": "/portfolio/static/media/tianyi-ma.5b0300c11456b04d2cb3.png",
     "static/media/pexels-alexander-grey-1209843.png": "/portfolio/static/media/pexels-alexander-grey-1209843.774e2bae508cebfc2f1a.png",
@@ -32,12 +33,12 @@
     "static/media/js.png": "/portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "index.html": "/portfolio/index.html",
-    "main.fc6af29f.css.map": "/portfolio/static/css/main.fc6af29f.css.map",
-    "main.a221ab86.js.map": "/portfolio/static/js/main.a221ab86.js.map",
+    "main.f8392990.css.map": "/portfolio/static/css/main.f8392990.css.map",
+    "main.b7344613.js.map": "/portfolio/static/js/main.b7344613.js.map",
     "787.1ed0c42c.chunk.js.map": "/portfolio/static/js/787.1ed0c42c.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.fc6af29f.css",
-    "static/js/main.a221ab86.js"
+    "static/css/main.f8392990.css",
+    "static/js/main.b7344613.js"
   ]
 }
