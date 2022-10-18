@@ -8,7 +8,7 @@ import navlogo from '../img/header-01.svg'
 
 const Sidebar = ({ scrollToElement,openToggle,openSidebar, ...props }) => {
   return (
-    <div className='sidebar' style={{left: props.toggle ? '100%' : 0 }}>
+    <div className='sidebar' style={{right: props.toggle ? '-100%' : 0 }}>
       <Link className='sidebar__logo'
          to={'/portfolio' } 
          onClick={() => openSidebar()}

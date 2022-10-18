@@ -92,7 +92,7 @@ const Works = ({ onActiveTav, ...props }) => {
     >
       <img src={src} alt={alt} />
       <div className="works__description">
-        <a href='/' className='works__description-title'>{title}</a>
+        <a href='/portfolio' className='works__description-title'>{title}</a>
         <p className='works__description-client'>{client}</p>
       </div>
     </div>

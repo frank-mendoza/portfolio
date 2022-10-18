@@ -12,10 +12,6 @@
   justify-content: space-between;
   @include sp {
     flex-direction: column;
-    padding: 60px 5% 0;
-  }
-  @include mx1400 {
-    padding: 80px 5% 50px;
   }
   
   &__video {
@@ -51,6 +47,9 @@
     margin: 0 auto;
     text-align: center;
     height: 100%;
+    @include mx1400 {
+      padding: 0 5%;
+    }
   }
 
   &__carousel {
@@ -78,11 +77,8 @@
     text-transform: uppercase;
     -webkit-text-stroke: 3px $primary;
     animation: alternate-reverse line 2s ease-in infinite;
-    @include mx1400 {
-      font-size: 30px;
-    }
     @include sp {
-      font-size: 25px;
+      font-size: 40px;
       text-align: center;
       line-height: normal;
       padding-bottom: 0;
@@ -107,8 +103,8 @@
     transition: ease-in 0.2s;
     @include sp {
       text-align: center;
-      font-size: 20px;
-      margin-top: 0;
+      font-size: 24px;
+      margin-top: 20px;
     }
     
     &:hover {
@@ -124,13 +120,21 @@
     color: $white;
     line-height: 24px;
     @include sp {
-      text-align: justify;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    br {
+      display: none;
+      @include sp {
+        display: block;
+      }
     }
   }
 
   &__icons {
-    gap: 10px;
-    right: 47.5%;
+    gap: 30px;
+    right: 0;
     bottom: 8%;
     display: flex;
     padding-top: 20px;
@@ -138,11 +142,11 @@
     align-items: center;
     justify-content: center;
     transition: ease 0.2s;
+    width: 100%;
     @include sp {
-      position: relative;
-      justify-content: center;
-      width: 100%;
+      bottom: 20px;
       padding: 50px 0 0 50px;
+      right: 0;
     }
     @include mx1400 {
       padding-right: 50px;
@@ -167,11 +171,5 @@
 
   .swiper {
     padding: 50px 0 !important;
-  }
-
-  .br {
-    @include sp {
-      display: none;
-    }
   }
 }

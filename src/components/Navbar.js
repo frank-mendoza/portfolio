@@ -19,7 +19,7 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollValue = `${scrollCal / height * 100}%`;
 
-      if(window.scrollY > 80){
+      if(window.scrollY >= 80){
         setColorchange(true);
       }
       else{
