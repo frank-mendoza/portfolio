@@ -111,6 +111,7 @@ const Works = ({ onActiveTav, ...props }) => {
       initiallyVisible={true}
       animateIn="animate__fadeInUp"
       animateOnce={true}
+      duration={1}
     >
 
       <div className="works" id='works' ref={props.location}>

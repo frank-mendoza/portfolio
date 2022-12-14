@@ -30,6 +30,7 @@ const About = ({ location }) => {
       className="about__container about__container-center" 
       animateIn={data.animateIn}
       animateOnce={true}
+      duration={1}
       >
       <div className="about__img" style={{ order: data.grid ? 1 : 2 }}>
         <img src={data.src} alt={data.alt} />
@@ -45,8 +46,9 @@ const About = ({ location }) => {
     <>
       <div className="about" id='about' ref={location}>
         <AnimationOnScroll 
-          animateIn="animate__slideInUp"
+          animateIn="animate__fadeInUp"
           animateOnce={true}
+          duration={1}
           >
 
           <h2 className="title">About</h2>

@@ -25,3 +25,57 @@
     height: 30px;
   }
 }
+
+.loader, 
+.error,
+.success {
+  height: 100vh;
+  width: 100vw;
+  z-index: -1;
+  position: fixed;
+  top: 0;
+  opacity: 0;
+  visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  transition: ease-in 0.2s;
+  
+  &.show {
+    z-index: 20;
+    opacity: 1;
+    transition: ease-in 0.2s;
+    visibility: visible;
+  }
+}
+
+.loader {
+  background-color: rgba(0, 0, 0, 0.345);
+}
+
+
+.error {
+  background-color: rgba(99, 99, 99, 0.252);
+}
+
+.alert {
+  max-width: 500px;
+  height: 200px;
+  font-size: 20px;
+  display: flex;
+  padding: 20px;
+  background-color: $white;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 20px 20px rgba(80, 80, 80, 0.214);
+
+  &.red {
+    color: red;
+  }
+
+  &.green {
+    color: green;
+  }
+}

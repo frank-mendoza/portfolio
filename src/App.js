@@ -14,17 +14,31 @@ import About from './components/About';
 import Contact from './components/Contact';
 import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
+import HashLoader from 'react-spinners/HashLoader';
 
 function App() {
 
-  const [loading, setLoading] = useState(false)
+  const inputContent = useRef()
+  const inputEmail = useRef()
+  const inputName = useRef()
+  const [error, setError] = useState(false)
   const [toggle, setToggle] = useState(true)
+  const [loader, setLoader] = useState(false)
+  const [loading, setLoading] = useState(false)
+  const [success, setSuccess] = useState(false)
   const [tab, setTabs] = useState({
     all: true,
     branding: false,
     creative: false,
     reactjs: false
   })
+  const [change, setChange] = useState(
+    {
+      name: '',
+      email: '',
+      content: ''
+    }
+  )
 
   const home = useRef(null)
   const about = useRef(null)
@@ -107,8 +121,91 @@ function App() {
     setToggle(true)
   }
 
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwEvTkvzO0dpDYgCtY1wEH6cC1EsfyZXyIVI7sPpOgIB06gFVUe6dMbsk8CsLkORppqhQ/exec'
+  const form = document.forms['submit-to-google-sheet']
+
+  const onSubmit = () => {
+
+    let name = change.name
+    let email = change.email
+    let content = change.content
+
+    if (name === '' || email === "" || content === '') {
+      return setError(true)
+    }
+
+    setLoader(true)
+
+    fetch(scriptURL,
+      {
+        method: 'POST', body: new FormData(form)
+      }
+    )
+      .then(() => {
+
+        setChange({
+          name: '',
+          email: '',
+          content: ''
+        })
+        
+        setLoader(false)
+        setSuccess(true)
+        setTimeout(() => {
+          setSuccess(false)
+        }, 1000)
+      })
+      .catch(() => {
+
+        setLoader(false)
+      })
+      
+  }
+
+  const onChange = (e) => {
+    let target = e.target;
+    let name = target.name;
+    let value = target.value;
+
+    if (name === 'name') {
+      setChange({
+        name: value,
+        email: change.email,
+        content: change.content
+      })
+    }
+    if (name === 'email') {
+      setChange({
+        name: change.name,
+        email: value,
+        content: change.content
+      })
+    }
+    if (name === 'content') {
+      setChange({
+        name: change.name,
+        email: change.email,
+        content: value
+      })
+    }
+    console.log(change);
+  }
+
   return (
     <>
+      <div className={loader ? 'loader show' : 'loader'}>
+        <HashLoader color='#fff' />
+      </div>
+
+      <div className={error ? 'error show' : 'error '} onClick={() => setError(false)}>
+        <p className='alert red'>Please make sure there are no blank fields.</p>
+      </div>
+
+      <div className={success ? 'success show' : 'success '} onClick={() => setError(false)}>
+        <p className='alert green' >Message succesfully sent.</p>
+      </div>
+
       <Router>
         <Navbar
           scrollToElement={scrollToElement}
@@ -135,7 +232,16 @@ function App() {
               <Home location={home} />
               <Works loading={loading} location={works} worksroute={false} onActiveTav={onActiveTav} tab={tab} />
               <About location={about} />
-              <Contact location={contact} />
+              <Contact
+                location={contact}
+                onSubmit={onSubmit}
+                loader={loader}
+                change={change}
+                onChange={onChange}
+                inputName={inputName}
+                inputEmail={inputEmail}
+                inputContent={inputContent}
+              />
               <Footer />
             </>}
           />
@@ -150,6 +256,7 @@ function App() {
           />
         </Routes>
       </Router>
+
     </>
   );
 }
