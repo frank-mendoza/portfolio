@@ -1,18 +1,11 @@
 import React from 'react'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
 import Button from '../customComponents/Button'
 
 const Contact = ({ location, onSubmit, change, onChange }) => {
   return (
 
     <div className="contact" id='contact' ref={location}>
-      <AnimationOnScroll
-        className='contact__container'
-        animateIn="animate__fadeInUp"
-        animateOnce={true}
-        duration={1}
-        
-      >
+      <div className='contact__container'>
         <h2 className="title">Contact</h2>
         <form action="" name='submit-to-google-sheet'
           onSubmit={(e) => {
@@ -56,7 +49,7 @@ const Contact = ({ location, onSubmit, change, onChange }) => {
             <Button name='Submit' />
           </div>
         </form>
-      </AnimationOnScroll>
+      </div>
     </div>
   )
 }

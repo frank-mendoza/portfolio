@@ -4,7 +4,7 @@ import { Link } from 'react-router-dom';
 import { MdClose } from 'react-icons/md';
 import Button from '../customComponents/Button'
 
-import navlogo from '../img/header-01.svg'
+import navlogo from '../img/logo.svg'
 
 const Sidebar = ({ scrollToElement,openToggle,openSidebar, ...props }) => {
   return (

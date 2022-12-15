@@ -4,7 +4,7 @@ import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Button from '../customComponents/Button'
 
-import navlogo from '../img/header-01.svg'
+import navlogo from '../img/logo.svg'
 
 const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
 
@@ -56,22 +56,29 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
                 to={'/portfolio'} 
                 className="navbar__links"
                 onClick={() => toggleRoutes(true,)}
-                style={{color: colorChange ? "#535461" : '#fff'}}
+                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >Home</Link>
               <Link 
                 to={'/portfolio'}
                 className="navbar__links"
                 onClick={() => toggleRoutes(false, works)}
-                style={{color: colorChange ? "#535461" : '#fff'}}
+                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >Works</Link>
               <Link 
                 to={'/portfolio'}
                 className="navbar__links"
                 onClick={() => toggleRoutes(false, about)}
-                style={{color: colorChange ? "#535461" : '#fff'}}
+                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >About</Link>
             </ul>
-            <Button name='Send Message' onClick={() => toggleRoutes(false, contact)}/>
+            {
+              window.location.pathname === '/portfolio/works' 
+              ?
+              <Link className='navbar__button' to={'/portfolio'}>Send Message</Link> 
+              :
+              <Button name='Send Message' onClick={() => toggleRoutes(false, contact)}
+            />
+            }
           </div>
           <div className="navbar__icon" onClick={() => openToggle()}>
             <GiHamburgerMenu color='#f9d126' size={25} />
