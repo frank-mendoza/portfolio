@@ -50,12 +50,12 @@
 }
 
 .loader {
-  background-color: rgba(0, 0, 0, 0.345);
+  background-color: rgba(0, 0, 0, 0.427);
 }
 
 
 .error {
-  background-color: rgba(99, 99, 99, 0.252);
+  background-color: rgba(99, 99, 99, 0.415);
 }
 
 .alert {
@@ -63,13 +63,19 @@
   height: 200px;
   font-size: 20px;
   display: flex;
-  padding: 20px;
+  padding: 50px;
+  gap: 20px;
   background-color: $white;
   justify-content: center;
   align-items: center;
   text-align: center;
+  flex-direction: column;
   border-radius: 10px;
+  position: relative;
   box-shadow: 0 20px 20px rgba(80, 80, 80, 0.214);
+  @include sp {
+    margin: 0 20px;
+  }
 
   &.red {
     color: red;
@@ -77,6 +83,10 @@
 
   &.green {
     color: green;
+  }
+
+  img {
+    width: 50px;
   }
 }
 
