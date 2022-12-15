@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.b7520f6c.css",
-    "main.js": "/portfolio/static/js/main.054e64ec.js",
+    "main.css": "/portfolio/static/css/main.f3b30968.css",
+    "main.js": "/portfolio/static/js/main.b1207069.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/headerVideo.mp4": "/portfolio/static/media/headerVideo.ecbf02aa4cb6e5b79ffb.mp4",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
@@ -31,12 +31,13 @@
     "static/media/illustrator.png": "/portfolio/static/media/illustrator.be2c11a35d886eeda681.png",
     "static/media/js.png": "/portfolio/static/media/js.3dfb665e058d08c99f28.png",
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
+    "static/media/logo.svg": "/portfolio/static/media/logo.2c03738b8dd9673bdcf6db820778f001.svg",
     "index.html": "/portfolio/index.html",
-    "main.b7520f6c.css.map": "/portfolio/static/css/main.b7520f6c.css.map",
-    "main.054e64ec.js.map": "/portfolio/static/js/main.054e64ec.js.map"
+    "main.f3b30968.css.map": "/portfolio/static/css/main.f3b30968.css.map",
+    "main.b1207069.js.map": "/portfolio/static/js/main.b1207069.js.map"
   },
   "entrypoints": [
-    "static/css/main.b7520f6c.css",
-    "static/js/main.054e64ec.js"
+    "static/css/main.f3b30968.css",
+    "static/js/main.b1207069.js"
   ]
 }
