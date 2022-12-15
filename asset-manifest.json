@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.f3b30968.css",
-    "main.js": "/portfolio/static/js/main.b1207069.js",
+    "main.css": "/portfolio/static/css/main.56994b6b.css",
+    "main.js": "/portfolio/static/js/main.e589edf1.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/headerVideo.mp4": "/portfolio/static/media/headerVideo.ecbf02aa4cb6e5b79ffb.mp4",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
@@ -19,6 +19,7 @@
     "static/media/responsive.svg": "/portfolio/static/media/responsive.949f43359a33e2eb980ad8f25ef9aca6.svg",
     "static/media/collab.svg": "/portfolio/static/media/collab.9d12dffdfdd949fc079bc679d5c8ee0f.svg",
     "static/media/wordpress.jpg": "/portfolio/static/media/wordpress.3ae55159a3b320c458c4.jpg",
+    "static/media/check.png": "/portfolio/static/media/check.3681c0e66d788244dcff.png",
     "static/media/header-04.svg": "/portfolio/static/media/header-04.44a5c47e20cdf9c4f7b89568bf77013f.svg",
     "static/media/frameworks.svg": "/portfolio/static/media/frameworks.82cca21882c3ae7df33c8792a464a2fd.svg",
     "static/media/header-03.svg": "/portfolio/static/media/header-03.7093dc2f320c5ad130fffe9aa0669d30.svg",
@@ -33,11 +34,11 @@
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.2c03738b8dd9673bdcf6db820778f001.svg",
     "index.html": "/portfolio/index.html",
-    "main.f3b30968.css.map": "/portfolio/static/css/main.f3b30968.css.map",
-    "main.b1207069.js.map": "/portfolio/static/js/main.b1207069.js.map"
+    "main.56994b6b.css.map": "/portfolio/static/css/main.56994b6b.css.map",
+    "main.e589edf1.js.map": "/portfolio/static/js/main.e589edf1.js.map"
   },
   "entrypoints": [
-    "static/css/main.f3b30968.css",
-    "static/js/main.b1207069.js"
+    "static/css/main.56994b6b.css",
+    "static/js/main.e589edf1.js"
   ]
 }
