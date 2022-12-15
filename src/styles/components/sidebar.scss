@@ -1,28 +1,31 @@
 .sidebar {
   opacity: 1;
-  gap: 20px;
-  width: 80%;
+  // width: 100%;
   height: 100%;
-  right: -100%;
   z-index: 20;
-  padding: 50px;
-  display: none;
   position: fixed;
-  align-items: center;
   transition: ease 0.5s;
-  flex-direction: column;
-  background-color: $primary;
-  justify-content: space-between;
-  box-shadow: 0 -20px 10px grey;
-  @include sp {
+  display: flex;
+  justify-content: flex-end;
+  background-color: transparent;
+  
+  &__wrapper{
+    box-shadow: 0 -20px 10px grey;
+    background-color: $primary;
+    flex-direction: column;
+    align-items: center;
+    overflow: hidden;
+    padding: 50px 0;
     display: flex;
+    height: 100%;
+    width: 60px;
+    gap: 20px;
   }
 
   &__logo {
-    width: 100px;
-    @include sp {
-      width: 60px;
-    }
+    width: 30px;
+    position: absolute;
+    bottom: 3%;
 
     img {
       width: 100%;
@@ -33,12 +36,12 @@
     list-style: none;
     display: flex;
     flex-direction: column;
-    align-items: flex-start;
-    gap: 50px;
+    align-items: center;
+    gap: 20px;
   }
 
   &__links {
-    font-size: 30px;
+    font-size: 18px;
     color: $text;
     transition: ease 0.2s;
 

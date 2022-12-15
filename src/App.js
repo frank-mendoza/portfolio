@@ -18,6 +18,10 @@ import Footer from './components/Footer';
 import Sidebar from './components/Sidebar';
 import HashLoader from 'react-spinners/HashLoader';
 
+import alert from './img/exclamation-mark.png'
+import successimg from './img/check.png'
+import { MdClose } from 'react-icons/md';
+
 function App() {
   const [error, setError] = useState(false)
   const [toggle, setToggle] = useState(true)
@@ -25,6 +29,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [showSvg, setShowSvg] = useState(false)
+  const [onHover, setonHover] = useState(false)
   const [tab, setTabs] = useState({
     all: true,
     branding: false,
@@ -47,12 +52,24 @@ function App() {
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwslINMU-qFNneN-QYV60vS8iks0q13XXd6ONxXOLkcJbz47YkKe9bBkwizfGdUxU_oFw/exec'
   const form = document.forms['submit-to-google-sheet']
 
+  if (loader || error || success) {
+    document.body.style.overflow = 'hidden';
+  } else {
+    document.body.style.overflow = 'unset';
+  }
+  
+
   useEffect(() => {
     setTimeout(() => {
       setLoading(true)
       setShowSvg(true)
     }, 3000)
   }, [])
+
+
+  const onHoverSidebar = () => {
+    setonHover(!onHover)
+  }
 
 
   const resetWorks = () => {
@@ -309,15 +326,27 @@ function App() {
       :
       <>
         <div className={loader ? 'loader show' : 'loader'}>
-          <HashLoader color='#fff' />
+          <HashLoader color='#f9d126' />
         </div>
 
-        <div className={error ? 'error show' : 'error '} onClick={() => setError(false)}>
-          <p className='alert red'>Please make sure there are no blank fields.</p>
+        <div className={error ? 'error show' : 'error '} >
+          <div className='alert red' >
+            <img src={alert} alt="alert" />
+            <p >Please make sure there are no blank fields.</p>
+          <MdClose 
+            onClick={() => setError(false)} 
+            size={20} 
+            color="#000"
+            style={{position: 'absolute', right: 20, top: 20, cursor: 'pointer' }
+          }/>
+          </div>
         </div>
 
-        <div className={success ? 'success show' : 'success '} onClick={() => setError(false)}>
-          <p className='alert green' >Message succesfully sent.</p>
+        <div className={success ? 'success show' : 'success '} >
+          <div className='alert green' >
+            <img src={successimg} alt="success" />
+            <p >Message succesfully sent.</p>
+          </div>
         </div>
 
         <Router>
@@ -336,7 +365,9 @@ function App() {
             works={works}
             toggle={toggle}
             about={about}
+            onHover={onHover}
             openSidebar={openSidebar}
+            mouseHover={onHoverSidebar}
             openToggle={() => setToggle(!toggle)}
             contact={contact}
           />
