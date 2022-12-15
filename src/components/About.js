@@ -26,11 +26,12 @@ const About = ({ location }) => {
   }
 
   const Descriptions = (data) => (
-    <AnimationOnScroll 
-      className="about__container about__container-center" 
-      animateIn={data.animateIn}
-      animateOnce={true}
-      >
+    <div
+      className="about__container about__container-center"
+    // animateIn={data.animateIn}
+    // animateOnce={true}
+    // duration={1}
+    >
       <div className="about__img" style={{ order: data.grid ? 1 : 2 }}>
         <img src={data.src} alt={data.alt} />
       </div>
@@ -38,25 +39,26 @@ const About = ({ location }) => {
         <h3>{data.title}</h3>
         <p>{data.text}</p>
       </div>
-    </AnimationOnScroll>
+    </div>
   )
 
   return (
     <>
       <div className="about" id='about' ref={location}>
-        <AnimationOnScroll 
-          animateIn="animate__slideInUp"
+        {/* <div 
+          animateIn="animate__fadeInUp"
           animateOnce={true}
-          >
+          duration={1}
+          > */}
 
-          <h2 className="title">About</h2>
-        </AnimationOnScroll>
+        <h2 className="title">About</h2>
+        {/* </div> */}
 
-        <AnimationOnScroll
-          animateOnce={true}
-           
-          className="about__container " 
-          animateIn="animate__bounceInUp">
+        <div
+          // animateOnce={true}
+          className="about__container "
+        // animateIn="animate__fadeInUp"
+        >
 
           <div className="about__item">
             <img src={collab} alt="collab" />
@@ -70,61 +72,54 @@ const About = ({ location }) => {
             <img src={responsive} alt="responsive" />
             <p>Mobile Responsive</p>
           </div>
-        </AnimationOnScroll>
+        </div>
 
         <Descriptions grid={false} src={collab} animateIn="animate__bounceInRight" alt="collab" title='Collaborative' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
         <Descriptions grid={true} src={frameworks} animateIn="animate__bounceInLeft" alt="frameworks" title='Frontend Frameworks' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
         <Descriptions grid={false} src={responsive} animateIn="animate__bounceInRight" alt="responsive " title='Mobile Responsiveness' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
-        
-        <AnimationOnScroll 
-           
-          animateIn="animate__bounceInUp"
-          animateOnce={true}
+
+        <div className="about__carousel">
+          <h2 className="title">What I Currently Knew?</h2>
+          <br />
+          <Swiper
+            modules={[Pagination, Autoplay]}
+            spaceBetween={20}
+            autoplay={{
+              delay: 2500,
+              disableOnInteraction: false,
+            }}
+            breakpoints={{
+              390: {
+                slidesPerView: 3,
+              },
+              414: {
+                slidesPerView: 3,
+              },
+              767: {
+                slidesPerView: 6
+              },
+              1000: {
+                slidesPerView: 10
+              }
+            }
+            }
+            pagination={true}
+            className='swiper'
           >
-          <div className="about__carousel">
-            <h2 className="title">What I Currently Knew?</h2>
-            <br />
-            <Swiper
-              modules={[Pagination, Autoplay]}
-              spaceBetween={20}
-              autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-              }}
-              breakpoints={{
-                390: {
-                  slidesPerView: 3,
-                },
-                414: {
-                  slidesPerView: 3,
-                },
-                767: {
-                  slidesPerView: 6
-                },
-                1000: {
-                  slidesPerView: 10
-                }
-              }
-              }
-              pagination={true}
-              className='swiper'
-            >
-              {carouselItem()}
-            </Swiper>
-          </div>
-        </AnimationOnScroll>
+            {carouselItem()}
+          </Swiper>
+        </div>
 
       </div>
-      <div className="about__wrapper">
-        <AnimationOnScroll 
-           
-          animateIn="animate__bounceInUp" 
-          className="about__contents"
-          animateOnce={true}
-          >
+      <div
+        // animateIn="animate__fadeInUp" 
+        // animateOnce={true}
+        className="about__wrapper"
+      >
+        <div className="about__contents" >
           <h2 className="title">Connect with me</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos exercitationem, magni facilis molestias dicta numquam saepe temporibus sunt enim quibusdam tempore consequuntur placeat voluptatem architecto ad ut harum quo.</p>
-        </AnimationOnScroll>
+        </div>
       </div>
     </>
   )

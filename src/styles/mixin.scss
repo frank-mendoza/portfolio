@@ -30,9 +30,12 @@
 
 @keyframes line {
   0% {
-    width: 0;
+    -webkit-text-stroke: 3px $primary;
+  }
+  50% {
+    -webkit-text-stroke: 3px $white;
   }
   100% {
-    width: 80%;
+    -webkit-text-stroke: 3px $secondary;
   }
 }

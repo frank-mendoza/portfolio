@@ -3,33 +3,52 @@
 
 .home {
   width: 100%;
+  height: 100vh;
   display: flex;
   margin: 0 auto;
-  max-width: 1400px;
   position: relative;
-  padding: 100px 0 0;
   align-items: center;
   box-sizing: border-box;
   justify-content: space-between;
   @include sp {
     flex-direction: column;
-    padding: 60px 5% 0;
   }
-  @include mx1400 {
-    padding: 100px 5% 50px;
-  }
+  
+  &__video {
+    position: absolute;
+    height: 100%;
+    width: 100%;
 
+    &::after {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background: rgba(0, 0, 0, 0.5);
+      z-index: 2;
+      top: 0;
+      left: 0;
+    }
+    
+    video {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  
   &__container {
-    width: 50%;
+    width: 100%;
+    max-width: 1400px;
     display: flex;
     justify-content: center;
     align-items: center;
-    @include sp {
-      width: 100%;
-    }
-
-    &-start {
-      justify-content: flex-start;
+    z-index: 5;
+    margin: 0 auto;
+    text-align: center;
+    height: 100%;
+    @include mx1400 {
+      padding: 0 5%;
     }
   }
 
@@ -46,72 +65,38 @@
   }
 
   &__title {
-    font-size: 70px;
-    font-weight: 900;
-    color: $text;
-    letter-spacing: 1px;
-    line-height: 70px;
+    font-size: 80px;
     padding: 10px 0;
-    text-transform: uppercase;
+    font-weight: 900;
+    line-height: 80px;
+    color: $primary;
     position: relative;
-    @include mx1400 {
-      font-size: 30px;
-    }
+    letter-spacing: 1px;
+    letter-spacing: 10px;
+    transition: ease-in 0.2s;
     @include sp {
-      font-size: 25px;
+      font-size: 40px;
       text-align: center;
       line-height: normal;
       padding-bottom: 0;
     }
-
-    &::after {
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 80%;
-      background-color: $primary;
-      bottom: 0;
-      left: 0;
-      z-index: -1;
-      transform: skew(-20deg);
-      @include sp {
-        display: none;
-      }
-    }
-
-    &::before {
-      content: '';
-      position: absolute;
-      height: 5px;
-      width: 60%;
-      background-color: $secondary;
-      bottom: -60px;
-      left: 0px;
-      z-index: -1;
-      transform: skew(-20deg);
-      @include sp {
-        display: none;
-      }
-    }
-
-    &:hover {
-      &::after,
-      &::before {
-        animation: line 0.5s ease-in;
-      }
-    }
+  }
+  
+  &__contents {
+    max-width: 700px;
   }
   
   &__subtitle {
-    color: $primary;
+    color: $secondary;
     font-weight: 500;
-    font-size: 36px;
+    font-size: 30px;
     margin: 10px 0 15px;
     letter-spacing: 1px;
+    transition: ease-in 0.2s;
     @include sp {
       text-align: center;
-      font-size: 20px;
-      margin-top: 0;
+      font-size: 24px;
+      margin-top: 20px;
     }
   }
 
@@ -119,30 +104,53 @@
     font-weight: 100;
     letter-spacing: 1px;
     font-size: 16px;
-    color: $text;
+    color: $white;
     line-height: 24px;
     @include sp {
-      text-align: justify;
+      text-align: center;
+      font-size: 14px;
+    }
+
+    br {
+      display: none;
+      @include sp {
+        display: block;
+      }
     }
   }
 
   &__icons {
-    display: flex;
-    align-items: center;
     gap: 10px;
+    right: 0;
+    bottom: 8%;
+    display: flex;
     padding-top: 20px;
     position: absolute;
-    bottom: 0;
-    right: 0;
+    align-items: center;
+    justify-content: center;
+    transition: ease 0.2s;
+    width: 100%;
     @include sp {
-      position: relative;
-      justify-content: center;
-      width: 100%;
+      bottom: 20px;
       padding: 50px 0 0 50px;
+      right: 0;
     }
     @include mx1400 {
       padding-right: 50px;
     }
+
+    a {
+      &:hover {
+        transition: ease 0.2s;
+        transform: translate(0, -5px);
+      }
+    }
+  }
+
+  &__icons-svg {
+    // background: $white;
+    border-radius: 2px;
+    padding: 2px;
   }
 
   .swiper-pagination {
@@ -156,11 +164,5 @@
 
   .swiper {
     padding: 50px 0 !important;
-  }
-
-  .br {
-    @include sp {
-      display: none;
-    }
   }
 }

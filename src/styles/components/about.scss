@@ -3,7 +3,6 @@
   width: 100%;
   margin: 0 auto;
   padding: 100px 0 80px;
-  overflow: hidden;
   @include mx1400 {
     padding: 0 5%;
   }
@@ -11,7 +10,6 @@
   &__container {
     display: flex;
     justify-content: space-between;
-    overflow: hidden;
     align-items: center;
     padding-bottom: 50px;
     margin-top: 40px;
@@ -23,7 +21,6 @@
 
     &-center {
       justify-content: center;
-      max-width: 1000px;
       width: 100%;
       margin: 0 auto;
       padding: 50px 0 0;
@@ -179,7 +176,7 @@
   }
 
   &__img {
-    width: 80%;
+    width: 60%;
 
     img {
       width: 100%;

@@ -1,25 +1,28 @@
 .sidebar {
-  width: 100%;
   opacity: 1;
-  position: fixed;
-  width: 100%;
+  gap: 20px;
+  width: 80%;
   height: 100%;
-  left: 100%;
-  background-color: $primary;
+  right: -100%;
   z-index: 20;
   padding: 50px;
   display: none;
-  justify-content: space-between;
-  flex-direction: column;
+  position: fixed;
   align-items: center;
-  gap: 20px;
   transition: ease 0.5s;
+  flex-direction: column;
+  background-color: $primary;
+  justify-content: space-between;
+  box-shadow: 0 -20px 10px grey;
   @include sp {
     display: flex;
   }
 
   &__logo {
     width: 100px;
+    @include sp {
+      width: 60px;
+    }
 
     img {
       width: 100%;
@@ -35,7 +38,7 @@
   }
 
   &__links {
-    font-size: 20px;
+    font-size: 30px;
     color: $text;
     transition: ease 0.2s;
 

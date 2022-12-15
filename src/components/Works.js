@@ -1,5 +1,4 @@
 import React from 'react'
-import { AnimationOnScroll } from 'react-animation-on-scroll'
 import { Link } from 'react-router-dom'
 
 import Button from '../customComponents/Button'
@@ -92,7 +91,7 @@ const Works = ({ onActiveTav, ...props }) => {
     >
       <img src={src} alt={alt} />
       <div className="works__description">
-        <a href='/' className='works__description-title'>{title}</a>
+        <a href='/portfolio' className='works__description-title'>{title}</a>
         <p className='works__description-client'>{client}</p>
       </div>
     </div>
@@ -100,18 +99,19 @@ const Works = ({ onActiveTav, ...props }) => {
 
   const showButton = () => {
     return  props.worksroute || data.length == 0 ? null :
-        <Link className="works__button" to='/portfolio/works'>
-          <Button name='See all' onClick={null} />
+        <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
+          <Button name='See all'  />
         </Link>
 
   }
 
   return (
-    <AnimationOnScroll
-      initiallyVisible={true}
-      animateIn="animate__bounceInUp"
-      animateOnce={true}
-    >
+    // <AnimationOnScroll
+    //   initiallyVisible={true}
+    //   animateIn="animate__fadeInUp"
+    //   animateOnce={true}
+    //   duration={1}
+    // >
 
       <div className="works" id='works' ref={props.location}>
         <h2 className="title">Works</h2>
@@ -130,7 +130,7 @@ const Works = ({ onActiveTav, ...props }) => {
         </div>
         {showButton()}
       </div>
-    </AnimationOnScroll>
+    // </AnimationOnScroll>
   )
 }
 

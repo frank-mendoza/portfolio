@@ -24,15 +24,17 @@
     margin-bottom: 20px;
     
     img {
-      width: 100px;
+      width: 50px;
+      @include sp {
+        width: 60px;
+      }
     }
   
     p {
-      font-size: 20px;
+      font-size: 16px;
       color: $black;
       font-weight: 700;
       text-align: start;
-      line-height: 24px;
       @include sp {
         font-size: 16px;
       }
