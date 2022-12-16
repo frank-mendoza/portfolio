@@ -3,6 +3,7 @@ import React, { useEffect, useState } from 'react'
 import { GiHamburgerMenu } from 'react-icons/gi';
 import { Link } from 'react-router-dom';
 import Button from '../customComponents/Button'
+import DarkThemeToggle from '../customComponents/darkThemeToggle';
 
 import navlogo from '../img/logo.svg'
 
@@ -58,16 +59,10 @@ const Navbar = ({
           <div className='navbar__link-wrapper'>
             <ul className="navbar__ul">
               <li className="custom__switch-wrap">
-
-                <label className="custom__switch">
-                  <input 
-                    onChange={toggleChangeTheme}
-                    type="checkbox" 
-                    name='toggle' 
-                    value={dark} 
-                  />
-                  <span className="round" />
-                </label>
+                <DarkThemeToggle 
+                  toggleChangeTheme={toggleChangeTheme} 
+                  dark={dark}
+                />
               </li>
               <Link
                 to={'/portfolio'}
