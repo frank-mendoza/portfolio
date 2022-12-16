@@ -123,7 +123,8 @@
   }
 
   &__description {
-
+    max-width: 600px;
+    width: 100%;
     &:first-child, &:last-child {
       @include sp {
         order: 2 !important;
@@ -145,7 +146,6 @@
         left: -20px;
         height: 50px;
         width: 100%;
-        transform: skew(-20deg);
         position: absolute;
         z-index: -1;
         background-color: $secondary;
@@ -160,7 +160,6 @@
         left: -5px;
         height: 50px;
         width: 100%;
-        transform: skew(-20deg);
         position: absolute;
         z-index: -2;
         opacity: 0.5;
@@ -170,18 +169,19 @@
 
     p {
       font-weight: 100;
-      font-size: 16px;
+      font-size: 20px;
       color: $text;
       margin-top: 20px;
       line-height: 1.5em;
       @include sp {
         text-align: justify;
+        font-size: 16px;
       }
     }
   }
 
   &__img {
-    width: 60%;
+    max-width:400px;
 
     img {
       width: 100%;
@@ -195,6 +195,9 @@
 
   &__carousel-img {
     width: 100px;
+    @include sp {
+      width: 80px;
+    }
 
     img {
       width: 100%;

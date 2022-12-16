@@ -29,16 +29,16 @@ const Sidebar = ({ scrollToElement, openToggle, openSidebar, ...props }) => {
         <div className="sidebar__links">
           <ul className="sidebar__ul">
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(true,)}>
-              <GrHomeRounded size={20} color='#fff' />
+              <GrHomeRounded size={20} stroke='#fff' />
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.works)}>
-              <GrProjects size={20} color='#fff' />
+              <GrProjects size={20} stroke='#fff' />
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.about)}>
-              <GrCatalog size={20} color='#fff' />
+              <GrCatalog size={20} stroke='#fff' />
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>
-              <GrMailOption size={20} color='#fff' />
+              <GrMailOption size={20} stroke='#fff' />
             </Link>
           </ul>
         </div>

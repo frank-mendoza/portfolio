@@ -8,7 +8,7 @@
   transition: ease 0.5s;
   display: none;
   justify-content: flex-end;
-  background-color: transparent;
+  background-color: #27272775;
   @include sp {
     display: flex;
     height: 100%;
@@ -18,7 +18,7 @@
   
   &__wrapper{
     box-shadow: 0 -20px 10px grey;
-    background-color: $primary;
+    background-color: rgb(255 205 114);
     flex-direction: column;
     align-items: center;
     overflow: hidden;
@@ -49,7 +49,7 @@
 
   &__links {
     font-size: 18px;
-    color: $text;
+    // color: $text;
     transition: ease 0.2s;
 
     &:hover {

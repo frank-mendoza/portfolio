@@ -19,20 +19,19 @@
     position: absolute;
     width: 100%;
     height: 100%;
-    right: -0;
-    top: -0;
+    right: 0;
+    top: 0;
     z-index: -1;
     transition: ease 0.2s;
     background-color: #ffdd9e;
   }
   
   &:hover {
+    letter-spacing: 1px;
     &::before {
-      width: 110%;
       transition: ease 0.2s;
-      height: 125%;
-      right: -10px;
-      top: -6px;
+      right: -5px;
+      top: 5px;
     }
   }
 }
