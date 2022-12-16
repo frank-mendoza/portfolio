@@ -12,56 +12,43 @@ const Works = ({ onActiveTav, ...props }) => {
   let creative = props.tab.creative
   let reactjs = props.tab.reactjs
 
+  let slicedata = data.slice(0, 6)
+
   const WorkItem = () => {
 
     let record = []
-    let slicedata = data.slice(0, 6)
 
-    window.location.pathname === '/works' ? record = data : record = slicedata
+    window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
 
     if (data.length == 0) {
       return <span>No records found</span>
     } else {
       if (all) {
         return record.map((item, key) => {
-
-          let src = item.src
-          
           return (
             <CustomItem
               key={key}
-              src={src}
-              alt={item.alt}
-              title={item.title}
-              client={item.client}
+              item={item}
             />
           )
         })
       }
       else if (branding) {
         return record.filter((e) => e.type == 1).map((item, key) => {
-          
           return (
             <CustomItem
               key={key}
-              src={item.src}
-              alt={item.alt}
-              title={item.title}
-              client={item.client}
+              item={item}
             />
           )
         })
       }
       else if (creative) {
         return record.filter((e) => e.type == 2).map((item, key) => {
-          
           return (
             <CustomItem
               key={key}
-              src={item.src}
-              alt={item.alt}
-              title={item.title}
-              client={item.client}
+              item={item}
             />
           )
         })
@@ -72,10 +59,7 @@ const Works = ({ onActiveTav, ...props }) => {
           return (
             <CustomItem
               key={key}
-              src={item.src}
-              alt={item.alt}
-              title={item.title}
-              client={item.client}
+              item={item}
             />
           )
         })
@@ -84,15 +68,15 @@ const Works = ({ onActiveTav, ...props }) => {
 
   }
 
-  const CustomItem = ({ src, alt, title, client }) => (
+  const CustomItem = ({ item}) => (
     <div
-      className="works__item"
+      className={data.length < 2 ? 'works__item single' : 'works__item'}
       style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
     >
-      <img src={src} alt={alt} />
+      <img src={item.src} alt={item.alt} />
       <div className="works__description">
-        <a href='/portfolio' className='works__description-title'>{title}</a>
-        <p className='works__description-client'>{client}</p>
+        <a href='/portfolio' className='works__description-title'>{item.title}</a>
+        <p className='works__description-client'>{item.client}</p>
       </div>
     </div>
   )
@@ -106,13 +90,6 @@ const Works = ({ onActiveTav, ...props }) => {
   }
 
   return (
-    // <AnimationOnScroll
-    //   initiallyVisible={true}
-    //   animateIn="animate__fadeInUp"
-    //   animateOnce={true}
-    //   duration={1}
-    // >
-
       <div className="works" id='works' ref={props.location}>
         <h2 className="title">Works</h2>
         <div className="works__tablinks">
@@ -123,14 +100,13 @@ const Works = ({ onActiveTav, ...props }) => {
             <li data-filter=".web" onClick={() => onActiveTav("reactjs")}>ReactJS</li>
           </ul>
         </div>
-        <div className="works__container">
+        <div className={data.length < 2 ? "works__container single" : 'works__container'}>
 
           {!props.loading ? <div style={{ textAlign: 'center', fontWeight: '700' }}>...loading</div> :
             WorkItem()}
         </div>
         {showButton()}
       </div>
-    // </AnimationOnScroll>
   )
 }
 

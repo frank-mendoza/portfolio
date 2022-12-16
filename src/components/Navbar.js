@@ -33,20 +33,14 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
 
   }, [])
 
-  const toggleRoutes = (top, location) => {
-
-    openToggle()
-    scrollToElement(top, location)
-  }
-
   return (
     <nav className='navbar' style={{backgroundColor: colorChange ? '#fff' : 'transparent'}}>
       <div className='navbar-nav'>
         <div className='navbar__wrapper'>
           <Link 
             className='navbar__logo' 
-            to={'/portfolio' } 
-            onClick={() => openSidebar()}
+            to={'/portfolio' }
+            onClick={() => scrollToElement(true)}
           >
             <img src={navlogo} alt="logo" />
           </Link>
@@ -55,19 +49,19 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
               <Link 
                 to={'/portfolio'} 
                 className="navbar__links"
-                onClick={() => toggleRoutes(true,)}
+                onClick={() => scrollToElement(true,)}
                 style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >Home</Link>
               <Link 
                 to={'/portfolio'}
                 className="navbar__links"
-                onClick={() => toggleRoutes(false, works)}
+                onClick={() => scrollToElement(false, works)}
                 style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >Works</Link>
               <Link 
                 to={'/portfolio'}
                 className="navbar__links"
-                onClick={() => toggleRoutes(false, about)}
+                onClick={() => scrollToElement(false, about)}
                 style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
               >About</Link>
             </ul>
@@ -76,11 +70,11 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
               ?
               <Link className='navbar__button' to={'/portfolio'}>Send Message</Link> 
               :
-              <Button name='Send Message' onClick={() => toggleRoutes(false, contact)}
+              <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
             />
             }
           </div>
-          <div className="navbar__icon" onClick={() => openToggle()}>
+          <div className="navbar__icon" onClick={() => openSidebar()}>
             <GiHamburgerMenu color='#f9d126' size={25} />
           </div>
         </div>

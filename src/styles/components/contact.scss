@@ -61,6 +61,9 @@
         color: $text;
         border: 1px solid transparent;
         transition: ease 0.2s;
+        @include sp {
+          font-size: 16px;
+        }
 
         &:focus, &:hover {
           box-shadow: 5px 5px 0 $primary;

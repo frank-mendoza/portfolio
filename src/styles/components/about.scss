@@ -46,8 +46,8 @@
     background-size: cover;
     position: relative;
     @include sp {
-      height: 400px;
-      padding: 5%;
+      height: auto;
+      padding: 30px 5%;
     }
   }
   
@@ -65,6 +65,11 @@
       font-size: 18px;
       color: $white;
       z-index: 5;
+      @include sp {
+        margin-top: 20px;
+        font-size: 16px;
+        line-height: 20px;
+      }
     }
   }
 
