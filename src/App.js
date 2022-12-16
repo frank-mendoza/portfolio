@@ -29,6 +29,7 @@ function App() {
   const [loading, setLoading] = useState(false)
   const [success, setSuccess] = useState(false)
   const [showSvg, setShowSvg] = useState(false)
+  const [onHover, setonHover] = useState(false)
   const [tab, setTabs] = useState({
     all: true,
     branding: false,
@@ -64,6 +65,11 @@ function App() {
       setShowSvg(true)
     }, 3000)
   }, [])
+
+
+  const onHoverSidebar = () => {
+    setonHover(!onHover)
+  }
 
 
   const resetWorks = () => {
@@ -353,7 +359,9 @@ function App() {
             works={works}
             toggle={toggle}
             about={about}
+            onHover={onHover}
             openSidebar={openSidebar}
+            mouseHover={onHoverSidebar}
             openToggle={() => setToggle(!toggle)}
             contact={contact}
           />
