@@ -9,7 +9,6 @@ import collab from "../img/collab.svg"
 import frameworks from "../img/frameworks.svg"
 import responsive from "../img/responsive.svg"
 import { about } from '../data';
-import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const About = ({ location }) => {
 
@@ -26,12 +25,7 @@ const About = ({ location }) => {
   }
 
   const Descriptions = (data) => (
-    <div
-      className="about__container about__container-center"
-    // animateIn={data.animateIn}
-    // animateOnce={true}
-    // duration={1}
-    >
+    <div className="about__container about__container-center" >
       <div className="about__img" style={{ order: data.grid ? 1 : 2 }}>
         <img src={data.src} alt={data.alt} />
       </div>
@@ -45,21 +39,8 @@ const About = ({ location }) => {
   return (
     <>
       <div className="about" id='about' ref={location}>
-        {/* <div 
-          animateIn="animate__fadeInUp"
-          animateOnce={true}
-          duration={1}
-          > */}
-
         <h2 className="title">About</h2>
-        {/* </div> */}
-
-        <div
-          // animateOnce={true}
-          className="about__container "
-        // animateIn="animate__fadeInUp"
-        >
-
+        <div className="about__container ">
           <div className="about__item">
             <img src={collab} alt="collab" />
             <p>Collaborative</p>
@@ -88,20 +69,15 @@ const About = ({ location }) => {
               delay: 2500,
               disableOnInteraction: false,
             }}
+            slidesPerView={3}
             breakpoints={{
-              390: {
-                slidesPerView: 3,
-              },
-              414: {
-                slidesPerView: 3,
-              },
-              767: {
-                slidesPerView: 6
-              },
-              1000: {
-                slidesPerView: 10
+                767: {
+                  slidesPerView: 6
+                },
+                1000: {
+                  slidesPerView: 10
+                }
               }
-            }
             }
             pagination={true}
             className='swiper'
@@ -111,11 +87,7 @@ const About = ({ location }) => {
         </div>
 
       </div>
-      <div
-        // animateIn="animate__fadeInUp" 
-        // animateOnce={true}
-        className="about__wrapper"
-      >
+      <div className="about__wrapper">
         <div className="about__contents" >
           <h2 className="title">Connect with me</h2>
           <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos exercitationem, magni facilis molestias dicta numquam saepe temporibus sunt enim quibusdam tempore consequuntur placeat voluptatem architecto ad ut harum quo.</p>
