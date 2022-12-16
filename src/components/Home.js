@@ -1,15 +1,14 @@
 import React from 'react'
 
-import headerVideo from '../img/headerVideo.mp4'
+import headerImg from '../img/pexels-miguel-á-padriñán-1591060.jpg'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
 const Home = ({ location }) => {
 
-
   return (
     <div className="home" id='home' ref={location}>
-      <div className='home__video'>
-        <video src={headerVideo} autoPlay muted loop></video>
+      <div className='home__img'>
+        <img src={headerImg} alt="pexels-miguel-á-padriñán-1591060" />
       </div>
       <AnimationOnScroll
         className="home__container"

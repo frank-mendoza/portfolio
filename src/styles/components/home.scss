@@ -14,7 +14,7 @@
     flex-direction: column;
   }
   
-  &__video {
+  &__img {
     position: absolute;
     height: 100%;
     width: 100%;
@@ -30,7 +30,7 @@
       left: 0;
     }
     
-    video {
+    img {
       height: 100%;
       width: 100%;
       object-fit: cover;
@@ -42,7 +42,7 @@
     max-width: 1400px;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: end;
     z-index: 5;
     margin: 0 auto;
     text-align: center;
@@ -84,6 +84,7 @@
   
   &__contents {
     max-width: 700px;
+    margin-bottom: 100px;
   }
   
   &__subtitle {
