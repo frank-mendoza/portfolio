@@ -20,7 +20,7 @@ const Works = ({ onActiveTav, ...props }) => {
 
     window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
 
-    if (data.length == 0) {
+    if (data.length === 0) {
       return <span>No records found</span>
     } else {
       if (all) {
@@ -34,7 +34,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (branding) {
-        return record.filter((e) => e.type == 1).map((item, key) => {
+        return record.filter((e) => e.type === 1).map((item, key) => {
           return (
             <CustomItem
               key={key}
@@ -44,7 +44,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (creative) {
-        return record.filter((e) => e.type == 2).map((item, key) => {
+        return record.filter((e) => e.type === 2).map((item, key) => {
           return (
             <CustomItem
               key={key}
@@ -54,7 +54,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (reactjs) {
-        return record.filter((e) => e.type == 3).map((item, key) => {
+        return record.filter((e) => e.type === 3).map((item, key) => {
           
           return (
             <CustomItem
@@ -82,7 +82,7 @@ const Works = ({ onActiveTav, ...props }) => {
   )
 
   const showButton = () => {
-    return  props.worksroute || data.length == 0 ? null :
+    return  props.worksroute || data.length === 0 ? null :
         <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
           <Button name='See all'  />
         </Link>

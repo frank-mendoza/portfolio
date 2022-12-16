@@ -1,0 +1,38 @@
+.button {
+  cursor: pointer;
+  background-color: $primary;
+  font-size: 16px;
+  color: $white;
+  border: 0;
+  outline: none;
+  padding: 15px;
+  width: 200px;
+  font-weight: 500;
+  transition: ease 0.2s;
+  text-align: center;
+  text-decoration: none;
+  border: 1px solid transparent;
+  position: relative;
+
+  &::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    right: -0;
+    top: -0;
+    z-index: -1;
+    transition: ease 0.2s;
+    background-color: #ffdd9e;
+  }
+  
+  &:hover {
+    &::before {
+      width: 110%;
+      transition: ease 0.2s;
+      height: 125%;
+      right: -10px;
+      top: -6px;
+    }
+  }
+}
