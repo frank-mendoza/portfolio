@@ -3,7 +3,7 @@ import { BsMessenger, BsSkype } from 'react-icons/bs'
 import { FaFacebookSquare } from 'react-icons/fa'
 import { SiGmail } from 'react-icons/si'
 
-import footerlogo from '../img/header-01.svg'
+import footerlogo from '../img/logo.svg'
 
 const Footer = () => {
   return (

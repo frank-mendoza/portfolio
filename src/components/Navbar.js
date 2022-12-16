@@ -68,14 +68,14 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
             {
               window.location.pathname === '/portfolio/works' 
               ?
-              <Link className='navbar__button' to={'/portfolio'}>Send Message</Link> 
+              <Link className='button' to={'/portfolio'}>Send Message</Link> 
               :
               <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
             />
             }
           </div>
           <div className="navbar__icon" onClick={() => openSidebar()}>
-            <GiHamburgerMenu color='#f9d126' size={25} />
+            <GiHamburgerMenu color='rgb(247, 185, 71)' size={25} />
           </div>
         </div>
       </div>
