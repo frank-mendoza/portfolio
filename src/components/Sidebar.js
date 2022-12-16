@@ -17,7 +17,7 @@ const Sidebar = ({ scrollToElement, openToggle, openSidebar, ...props }) => {
           { right: '-100%', width: 0 }
           :
           { right: 0, width: '100%' }}
-      onClick={() => openToggle()}
+      onClick={() => openSidebar()}
     >
       <div className="sidebar__wrapper">
         <Link className='sidebar__logo'
@@ -28,18 +28,18 @@ const Sidebar = ({ scrollToElement, openToggle, openSidebar, ...props }) => {
         </Link>
         <div className="sidebar__links">
           <ul className="sidebar__ul">
-            <li className="sidebar__links" onClick={() => scrollToElement(true,)}>
+            <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(true,)}>
               <GrHomeRounded size={20} color='#fff' />
-            </li>
-            <li className="sidebar__links" onClick={() => scrollToElement(false, props.works)}>
+            </Link>
+            <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.works)}>
               <GrProjects size={20} color='#fff' />
-            </li>
-            <li className="sidebar__links" onClick={() => scrollToElement(false, props.about)}>
+            </Link>
+            <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.about)}>
               <GrCatalog size={20} color='#fff' />
-            </li>
-            <li className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>
+            </Link>
+            <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>
               <GrMailOption size={20} color='#fff' />
-            </li>
+            </Link>
           </ul>
         </div>
         {/* <Button name='Send Message' secondary={true} onClick={() => scrollToElement(false, props.contact)}/> */}

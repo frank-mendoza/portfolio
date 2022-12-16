@@ -61,7 +61,7 @@
       text-transform: uppercase;
       cursor: pointer;
       border-right: 1px solid $text;
-      transition: ease 0.2s;
+      transition: opacity 500ms ease-in-out;
       @include sp {
         min-width: 40%;
       }
@@ -72,7 +72,7 @@
 
       &:active,
       &:hover {
-        transition: ease 0.2s;
+        transition: opacity 500ms ease-in-out;
         color: $black;
       }
     }
@@ -93,7 +93,12 @@
     position: relative;
     overflow: hidden;
     flex: auto;
-    transition: ease 1s;
+    transition: opacity 500ms ease-in-out;
+
+    &.single {
+      max-width: 300px;
+      justify-self: flex-start;
+    }
 
     img {
       object-fit: cover;

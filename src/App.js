@@ -139,16 +139,10 @@ function App() {
     } else {
       location.current?.scrollIntoView({ behavior: 'smooth' });
     }
-
-    setToggle(!toggle)
   }
 
   const openSidebar = () => {
-    window.scrollTo({
-      top: 0,
-      behavior: 'smooth'
-    })
-    setToggle(true)
+    setToggle(!toggle)
   }
 
   const onSubmit = () => {
