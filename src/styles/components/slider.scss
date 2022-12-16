@@ -5,6 +5,10 @@
   width: 100%;
   background-color: $slider;
   height: 5px;
+  
+  &.dark {
+    background-color: #858585;
+  }
 
   .slider {
     width: 0;

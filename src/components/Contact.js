@@ -1,18 +1,18 @@
 import React from 'react'
 import Button from '../customComponents/Button'
 
-const Contact = ({ location, onSubmit, change, onChange }) => {
+const Contact = ({ location, onSubmit, change, onChange, dark }) => {
   return (
 
-    <div className="contact" id='contact' ref={location}>
+    <div className={!dark ? "contact " : 'contact dark'} id='contact' ref={location}>
       <div className='contact__container'>
-        <h2 className="title">Contact</h2>
+        <h2 className={!dark ? "title" : "title dark"}>Contact</h2>
         <form action="" name='submit-to-google-sheet'
           onSubmit={(e) => {
             e.preventDefault()
             onSubmit()
           }}
-          className='contact__form'
+          className={!dark ? 'contact__form' : 'contact__form dark'}
         >
           <div className="contact__form-items">
             <label htmlFor="name">Full Name</label>

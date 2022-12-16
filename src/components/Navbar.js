@@ -6,12 +6,18 @@ import Button from '../customComponents/Button'
 
 import navlogo from '../img/logo.svg'
 
-const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
+const Navbar = ({ 
+  toggleChangeTheme,
+  scrollToElement, 
+  openToggle, 
+  openSidebar, 
+  ...props 
+}) => {
 
   const [scroll, setScroll] = useState(0)
   const [colorChange, setColorchange] = useState(false)
 
-  let { works, about, contact } = { ...props }
+  let { works, about, contact, dark } = { ...props }
 
   useEffect(() => {
     window.addEventListener("scroll", () => {
@@ -19,59 +25,88 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
       const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
       const scrollValue = `${scrollCal / height * 100}%`;
 
-      if(window.scrollY >= 80){
+      if (window.scrollY >= 80) {
         setColorchange(true);
       }
-      else{
+      else {
         setColorchange(false);
       }
-
       setScroll(scrollValue);
-      
     })
-
 
   }, [])
 
   return (
-    <nav className='navbar' style={{backgroundColor: colorChange ? '#fff' : 'transparent'}}>
+    <nav 
+      className='navbar' 
+      style={{ 
+        backgroundColor: colorChange ? 
+          !props.dark ? '#fff'  : '#2a2a2a'
+        : 
+        'transparent' 
+      }}
+    >
       <div className='navbar-nav'>
         <div className='navbar__wrapper'>
-          <Link 
-            className='navbar__logo' 
-            to={'/portfolio' }
+          <Link
+            className='navbar__logo'
+            to={'/portfolio'}
             onClick={() => scrollToElement(true)}
           >
             <img src={navlogo} alt="logo" />
           </Link>
           <div className='navbar__link-wrapper'>
             <ul className="navbar__ul">
-              <Link 
-                to={'/portfolio'} 
+              <li className="custom__switch-wrap">
+
+                <label className="custom__switch">
+                  <input 
+                    onChange={toggleChangeTheme}
+                    type="checkbox" 
+                    name='toggle' 
+                    value={dark} 
+                  />
+                  <span className="round" />
+                </label>
+              </li>
+              <Link
+                to={'/portfolio'}
                 className="navbar__links"
                 onClick={() => scrollToElement(true,)}
-                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
+                style={{ 
+                  color: colorChange || window.location.pathname === '/portfolio/works' 
+                  ? props.dark ? '#fff' : "#535461" 
+                  : '#fff' 
+                }}
               >Home</Link>
-              <Link 
+              <Link
                 to={'/portfolio'}
                 className="navbar__links"
                 onClick={() => scrollToElement(false, works)}
-                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
+                style={{ 
+                  color: colorChange || window.location.pathname === '/portfolio/works' 
+                  ? props.dark ? '#fff' : "#535461" 
+                  : '#fff' 
+                }}
               >Works</Link>
-              <Link 
+              <Link
                 to={'/portfolio'}
                 className="navbar__links"
                 onClick={() => scrollToElement(false, about)}
-                style={{color: colorChange || window.location.pathname === '/portfolio/works' ? "#535461" : '#fff'}}
+                style={{ 
+                  color: colorChange || window.location.pathname === '/portfolio/works' 
+                  ? props.dark ? '#fff' : "#535461" 
+                  : '#fff' 
+                }}
               >About</Link>
             </ul>
             {
-              window.location.pathname === '/portfolio/works' 
-              ?
-              <Link className='button' to={'/portfolio'}>Send Message</Link> 
-              :
-              <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
-            />
+              window.location.pathname === '/portfolio/works'
+                ?
+                <Link className='button' to={'/portfolio'}>Send Message</Link>
+                :
+                <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
+                />
             }
           </div>
           <div className="navbar__icon" onClick={() => openSidebar()}>
@@ -79,8 +114,11 @@ const Navbar = ({ scrollToElement, openToggle,openSidebar, ...props }) => {
           </div>
         </div>
       </div>
-      <div className="slider-container" style={{opacity: colorChange ? 1 : 0}}>
-        <div className="slider" style={{ width: scroll }}></div>
+      <div className={!dark ? "slider-container" : "slider-container dark"} style={{ opacity: colorChange ? 1 : 0 }}>
+        <div 
+          className="slider"
+          style={{ width: scroll }}
+        ></div>
       </div>
     </nav>
   )

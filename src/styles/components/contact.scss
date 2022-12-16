@@ -7,6 +7,10 @@
     padding: 80px 5%;
     height: 100%;
   }
+
+  &.dark {
+    background-color: $black;
+  }
   
   &__container {
     display: flex;
@@ -19,6 +23,11 @@
     max-width: 1400px;
     width: 100%;
     margin: 0 auto;
+    color: $text;
+
+    &.dark {
+      color: $white;
+    }
 
     &-items {
       max-width: 900px;
@@ -35,7 +44,7 @@
       label {
         min-width: 150px;
         font-size: 18px;
-        color: $text;
+        color: inherit;
         font-weight: 700;
         @include sp {
           width: 100%;
