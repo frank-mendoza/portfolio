@@ -1,18 +1,16 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.041cd085.css",
-    "main.js": "/portfolio/static/js/main.7c3ea23d.js",
+    "main.css": "/portfolio/static/css/main.281ea52a.css",
+    "main.js": "/portfolio/static/js/main.d5b78b34.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/designecologist.png": "/portfolio/static/media/designecologist.f75cdfcf739b406f22fd.png",
     "static/media/tianyi-ma.png": "/portfolio/static/media/tianyi-ma.5b0300c11456b04d2cb3.png",
     "static/media/pexels-alexander-grey-1209843.png": "/portfolio/static/media/pexels-alexander-grey-1209843.774e2bae508cebfc2f1a.png",
     "static/media/pexels-miguel-á-padriñán-1591060.jpg": "/portfolio/static/media/pexels-miguel-á-padriñán-1591060.53ca9852cf2aa967fe88.jpg",
-    "static/media/pexels-fauxels-3183197.png": "/portfolio/static/media/pexels-fauxels-3183197.29ac28edffb5cef6de4c.png",
-    "static/media/pexels-tranmautritam-251225.png": "/portfolio/static/media/pexels-tranmautritam-251225.6fef3302c1f4ca00beb5.png",
-    "static/media/pexels-sound-on-3756879.png": "/portfolio/static/media/pexels-sound-on-3756879.ac1c2d26f4ddc0e73b8f.png",
-    "static/media/pexels-magda-ehlers-1279813.png": "/portfolio/static/media/pexels-magda-ehlers-1279813.543983e164197b2d78fa.png",
-    "static/media/pexels-thisisengineering-3913025.png": "/portfolio/static/media/pexels-thisisengineering-3913025.ee52307b259af0fcdb6c.png",
+    "static/media/beyoka.png": "/portfolio/static/media/beyoka.a6a17cb9161eded60877.png",
+    "static/media/simulator.png": "/portfolio/static/media/simulator.cc9fad027b8515e5445e.png",
     "static/media/adobexd.png": "/portfolio/static/media/adobexd.26af061627cf107d32c8.png",
+    "static/media/tokyo23fc-logo.svg": "/portfolio/static/media/tokyo23fc-logo.282296548322ac86c0ae0a96e3e74bd2.svg",
     "static/media/reactjs.png": "/portfolio/static/media/reactjs.35639ed930462bfcd544.png",
     "static/media/sass.png": "/portfolio/static/media/sass.91714f748188b46f4e33.png",
     "static/media/reactnative.png": "/portfolio/static/media/reactnative.86c8d9eba03e29814d2a.png",
@@ -23,6 +21,7 @@
     "static/media/header-04.svg": "/portfolio/static/media/header-04.44a5c47e20cdf9c4f7b89568bf77013f.svg",
     "static/media/frameworks.svg": "/portfolio/static/media/frameworks.7a0ea07e34993e8d9db182cb7c057820.svg",
     "static/media/header-03.svg": "/portfolio/static/media/header-03.7093dc2f320c5ad130fffe9aa0669d30.svg",
+    "static/media/risso.png": "/portfolio/static/media/risso.ecb93da140e7cb3ad379.png",
     "static/media/figma.png": "/portfolio/static/media/figma.72fbc535ebe253a5dbc4.png",
     "static/media/photoshop.png": "/portfolio/static/media/photoshop.047cad202c4a70579aa2.png",
     "static/media/html.png": "/portfolio/static/media/html.cfb2ba4a6b1c3de295bc.png",
@@ -31,14 +30,15 @@
     "static/media/header-02.svg": "/portfolio/static/media/header-02.ea21ace4da7c8d0a1be14e330e5620ca.svg",
     "static/media/illustrator.png": "/portfolio/static/media/illustrator.be2c11a35d886eeda681.png",
     "static/media/js.png": "/portfolio/static/media/js.3dfb665e058d08c99f28.png",
+    "static/media/sakura roof.svg": "/portfolio/static/media/sakura roof.e4263c57ae054ac9e5d68bc257dbcedc.svg",
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.b93f5448d75fbd0161cfe8a2441cd055.svg",
     "index.html": "/portfolio/index.html",
-    "main.041cd085.css.map": "/portfolio/static/css/main.041cd085.css.map",
-    "main.7c3ea23d.js.map": "/portfolio/static/js/main.7c3ea23d.js.map"
+    "main.281ea52a.css.map": "/portfolio/static/css/main.281ea52a.css.map",
+    "main.d5b78b34.js.map": "/portfolio/static/js/main.d5b78b34.js.map"
   },
   "entrypoints": [
-    "static/css/main.041cd085.css",
-    "static/js/main.7c3ea23d.js"
+    "static/css/main.281ea52a.css",
+    "static/js/main.d5b78b34.js"
   ]
 }
