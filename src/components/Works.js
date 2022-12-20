@@ -12,13 +12,18 @@ const Works = ({ onActiveTav, ...props }) => {
   let creative = props.tab.creative
   let reactjs = props.tab.reactjs
 
+  
   let slicedata = data.slice(0, 6)
+  let record = []
+  
+  window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
+  
+  let brandItems = record.filter((e) => e.type === 1)
+  let creativeItems = record.filter((e) => e.type === 2)
+  let reactjsItems = record.filter((e) => e.type === 3)
 
   const WorkItem = () => {
-
-    let record = []
-
-    window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
+  
 
     if (data.length === 0) {
       return <span>No records found</span>
@@ -34,7 +39,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (branding) {
-        return record.filter((e) => e.type === 1).map((item, key) => {
+        return brandItems.map((item, key) => {
           return (
             <CustomItem
               key={key}
@@ -44,7 +49,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (creative) {
-        return record.filter((e) => e.type === 2).map((item, key) => {
+        return creativeItems.map((item, key) => {
           return (
             <CustomItem
               key={key}
@@ -54,7 +59,7 @@ const Works = ({ onActiveTav, ...props }) => {
         })
       }
       else if (reactjs) {
-        return record.filter((e) => e.type === 3).map((item, key) => {
+        return reactjsItems.map((item, key) => {
           
           return (
             <CustomItem
@@ -70,12 +75,12 @@ const Works = ({ onActiveTav, ...props }) => {
 
   const CustomItem = ({ item}) => (
     <div
-      className={data.length < 2 ? 'works__item single' : 'works__item'}
+      className={!props.dark ? 'works__item' : 'works__item dark'}
       style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
     >
       <img src={item.src} alt={item.alt} />
-      <div className="works__description">
-        <a href='/portfolio' className='works__description-title'>{item.title}</a>
+      <div className={!props.dark ? "works__description" :"works__description dark"}>
+        <a href={item.link} target='_blank' className='works__description-title'>{item.title}</a>
         <p className='works__description-client'>{item.client}</p>
       </div>
     </div>
@@ -84,7 +89,7 @@ const Works = ({ onActiveTav, ...props }) => {
   const showButton = () => {
     return  props.worksroute || data.length === 0 ? null :
         <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
-          <Button name='See all'  />
+          <Button dark={props.dark} name='See all'  />
         </Link>
 
   }
@@ -92,8 +97,8 @@ const Works = ({ onActiveTav, ...props }) => {
   return (
     <div className={!props.dark ? 'wrapper' : 'wrapper dark'}>
       <div className="works" id='works' ref={props.location}>
-        <h2 className="title">Works</h2>
-        <div className="works__tablinks">
+        <h2 className={!props.dark ? "title" : "title dark"}>Works</h2>
+        <div className={!props.dark ? "works__tablinks" : "works__tablinks bordered"}>
           <ul className="works__filter list">
             <li className="active" data-filter="*" onClick={() => onActiveTav("all")}>All Categories</li>
             <li data-filter=".brand" onClick={() => onActiveTav("branding")}>Branding</li>

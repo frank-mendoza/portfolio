@@ -6,10 +6,10 @@ const DarkThemeToggle = ({toggleChangeTheme, dark}) => {
     <input 
       onChange={toggleChangeTheme}
       type="checkbox" 
-      name='toggle' 
-      value={dark} 
+      name='toggle'
+      value={dark}
     />
-    <span className="round" />
+    <span className={dark ? 'round dark' : "round"} />
   </label>
   )
 }

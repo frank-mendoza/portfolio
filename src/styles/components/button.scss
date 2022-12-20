@@ -3,7 +3,6 @@
   background-color: $primary;
   font-size: 16px;
   color: $white;
-  border: 0;
   outline: none;
   padding: 15px;
   width: 200px;
@@ -13,6 +12,16 @@
   text-decoration: none;
   border: 1px solid transparent;
   position: relative;
+
+  &.dark {
+    background-color: $dark;
+    border: 1px solid $white;
+
+    &::before {
+      background-color: transparent;
+      border: 1px solid $white;
+    }
+  }
 
   &::before {
     content: '';

@@ -1,8 +1,8 @@
 import React from 'react'
 
-const Button = ({ name, secondary, onClick }) => (
+const Button = ({ name, dark, onClick }) => (
   <button
-    className='button'
+    className={!dark ? 'button' : 'button dark'}
     onClick={() =>
       onClick ?
         onClick() : null

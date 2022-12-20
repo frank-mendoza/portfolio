@@ -14,7 +14,7 @@ const Contact = ({ location, onSubmit, change, onChange, dark }) => {
           }}
           className={!dark ? 'contact__form' : 'contact__form dark'}
         >
-          <div className="contact__form-items">
+          <div className={!dark ? "contact__form-items" : 'contact__form-items bordered'}>
             <label htmlFor="name">Full Name</label>
             <input
               onChange={onChange} 
@@ -24,7 +24,7 @@ const Contact = ({ location, onSubmit, change, onChange, dark }) => {
               placeholder='Enter name here' 
             />  
           </div>
-          <div className="contact__form-items">
+          <div className={!dark ? "contact__form-items" : 'contact__form-items bordered'}>
             <label htmlFor="email">Email</label>
             <input 
               onChange={onChange}
@@ -34,7 +34,7 @@ const Contact = ({ location, onSubmit, change, onChange, dark }) => {
               placeholder='Enter email here' 
             />
           </div>
-          <div className="contact__form-items">
+          <div className={!dark ? "contact__form-items" : 'contact__form-items bordered'}>
             <label htmlFor="content" className='start'>Contents of Inqury</label>
             <textarea 
               onChange={onChange}
@@ -46,7 +46,7 @@ const Contact = ({ location, onSubmit, change, onChange, dark }) => {
             />
           </div>
           <div className="contact__button-wrapper">
-            <Button name='Submit' />
+            <Button dark={dark} name='Submit' />
           </div>
         </form>
       </div>

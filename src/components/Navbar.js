@@ -100,7 +100,10 @@ const Navbar = ({
                 ?
                 <Link className='button' to={'/portfolio'}>Send Message</Link>
                 :
-                <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
+                <Button 
+                  dark={dark}
+                  name='Send Message' 
+                  onClick={() => scrollToElement(false, contact)}
                 />
             }
           </div>
