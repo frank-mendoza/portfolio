@@ -90,6 +90,7 @@ const Works = ({ onActiveTav, ...props }) => {
   }
 
   return (
+    <div className={!props.dark ? 'wrapper' : 'wrapper dark'}>
       <div className="works" id='works' ref={props.location}>
         <h2 className="title">Works</h2>
         <div className="works__tablinks">
@@ -107,6 +108,7 @@ const Works = ({ onActiveTav, ...props }) => {
         </div>
         {showButton()}
       </div>
+    </div>
   )
 }
 

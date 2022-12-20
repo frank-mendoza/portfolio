@@ -23,6 +23,7 @@ import successimg from './img/check.png'
 import { MdClose } from 'react-icons/md';
 
 function App() {
+  const [dark, setDark] = useState(false)
   const [error, setError] = useState(false)
   const [toggle, setToggle] = useState(true)
   const [loader, setLoader] = useState(false)
@@ -57,7 +58,6 @@ function App() {
   } else {
     document.body.style.overflow = 'unset';
   }
-  
 
   useEffect(() => {
     setTimeout(() => {
@@ -66,6 +66,9 @@ function App() {
     }, 3000)
   }, [])
 
+  const onDarkTheme = () => {
+    setDark(!dark)
+  }
 
   const onHoverSidebar = () => {
     setonHover(!onHover)
@@ -211,7 +214,6 @@ function App() {
     }
   }
 
-
   const icon = {
     hidden: {
       opacity: 0,
@@ -345,16 +347,18 @@ function App() {
 
         <Router>
           <Navbar
+            openToggle={() => setToggle(!toggle)}
+            toggleChangeTheme={onDarkTheme}
             scrollToElement={scrollToElement}
-            home={home}
+            openSidebar={openSidebar}
+            onDarkTheme={onDarkTheme}
+            contact={contact}
             works={works}
             about={about}
-            contact={contact}
-            openSidebar={openSidebar}
-            openToggle={() => setToggle(!toggle)}
+            home={home}
+            dark={dark}
           />
           <Sidebar
-            scrollToElement={scrollToElement}
             home={home}
             works={works}
             toggle={toggle}
@@ -362,26 +366,49 @@ function App() {
             onHover={onHover}
             openSidebar={openSidebar}
             mouseHover={onHoverSidebar}
+            toggleChangeTheme={onDarkTheme}
+            scrollToElement={scrollToElement}
             openToggle={() => setToggle(!toggle)}
             contact={contact}
+            dark={dark}
           />
           <Routes>
             <Route path="/portfolio" element={
               <>
-                <Home location={home} />
-                <Works loading={loading} location={works} worksroute={false} onActiveTav={onActiveTav} tab={tab} resetWorks={resetWorks} />
-                <About location={about} />
+                <Home location={home}  />
+                <Works 
+                  loading={loading} 
+                  location={works} 
+                  worksroute={false} 
+                  tab={tab} 
+                  dark={dark}
+                  onActiveTav={onActiveTav} 
+                  resetWorks={resetWorks} 
+                />
+                <About 
+                  location={about}
+                  dark={dark}
+                 />
                 <Contact
                   location={contact}
                   onSubmit={onSubmit}
                   loader={loader}
                   change={change}
+                  dark={dark}
                   onChange={onChange}
                 />
-                <Footer />
+                <Footer dark={dark}/>
               </>}
             />
-            <Route path="/portfolio/works" element={<Works loading={loading} worksroute={true} onActiveTav={onActiveTav} tab={tab} />} />
+            <Route path="/portfolio/works" 
+              element={
+                <Works loading={loading} worksroute={true} 
+                  onActiveTav={onActiveTav} 
+                  tab={tab} 
+                  dark={dark} 
+                  />
+                } 
+            />
             <Route
               path="*"
               element={

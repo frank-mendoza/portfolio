@@ -6,8 +6,9 @@ import { GrProjects, GrMailOption, GrHomeRounded, GrCatalog } from 'react-icons/
 import Button from '../customComponents/Button'
 
 import navlogo from '../img/logo.svg'
+import DarkThemeToggle from '../customComponents/darkThemeToggle';
 
-const Sidebar = ({ scrollToElement, openToggle, openSidebar, ...props }) => {
+const Sidebar = ({ toggleChangeTheme,scrollToElement, openToggle, openSidebar, ...props }) => {
   return (
     <div
       className='sidebar'
@@ -28,6 +29,12 @@ const Sidebar = ({ scrollToElement, openToggle, openSidebar, ...props }) => {
         </Link>
         <div className="sidebar__links">
           <ul className="sidebar__ul">
+            <li className="custom__switch-wrap">
+              <DarkThemeToggle
+                toggleChangeTheme={toggleChangeTheme}
+                dark={props.dark}
+              />
+            </li>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(true,)}>
               <GrHomeRounded size={20} stroke='#fff' />
             </Link>

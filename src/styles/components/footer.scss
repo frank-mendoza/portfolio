@@ -10,9 +10,15 @@
     align-items: center;
     flex-direction: column;
     text-align: center;
+    color: $text;
     background-color: $primary;
     @include sp {
       padding: 60px 5%;
+    }
+
+    &.dark {
+      background-color: $dark;
+      color: $white;
     }
   }
   
@@ -32,7 +38,7 @@
   
     p {
       font-size: 16px;
-      color: $black;
+      color: inherit;
       font-weight: 700;
       text-align: start;
       @include sp {
@@ -55,6 +61,6 @@
   &__copyright {
     font-size: 12px;
     font-weight: 600;
-    color: $text;
+    color: inherit;
   }
 }
