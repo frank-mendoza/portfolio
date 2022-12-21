@@ -87,7 +87,7 @@ const Works = ({ onActiveTav, ...props }) => {
   )
 
   const showButton = () => {
-    return  props.worksroute || data.length === 0 ? null :
+    return  props.worksroute || data.length === 0 || data.length <= 6 ? null :
         <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
           <Button dark={props.dark} name='See all'  />
         </Link>

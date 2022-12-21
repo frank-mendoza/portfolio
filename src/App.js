@@ -21,6 +21,7 @@ import HashLoader from 'react-spinners/HashLoader';
 import alert from './img/exclamation-mark.png'
 import successimg from './img/check.png'
 import { MdClose } from 'react-icons/md';
+import { Scrollbar } from 'smooth-scrollbar-react';
 
 function App() {
   const [dark, setDark] = useState(false)
@@ -53,20 +54,20 @@ function App() {
   const scriptURL = 'https://script.google.com/macros/s/AKfycbwslINMU-qFNneN-QYV60vS8iks0q13XXd6ONxXOLkcJbz47YkKe9bBkwizfGdUxU_oFw/exec'
   const form = document.forms['submit-to-google-sheet']
 
-  if (loader || error || success) {
+  if (loader || error || success || !toggle) {
     document.body.style.overflow = 'hidden';
   } else {
     document.body.style.overflow = 'unset';
   }
 
   let getDark = JSON.parse(localStorage.getItem('items'));
-  useEffect(() => { 
+  useEffect(() => {
 
     if (getDark) {
       setDark(getDark);
       document.body.style.background = '#2a2a2a'
     }
-    if (getDark == false) {
+    if (getDark === false) {
       setDark(getDark);
       document.body.style.background = '#fff'
     }
@@ -334,24 +335,24 @@ function App() {
       :
       <>
         <div className={loader ? 'loader show' : 'loader'}>
-          <HashLoader color='rgb(247, 185, 71)' />
+          <HashLoader color='#f7b947' />
         </div>
 
         <div className={error ? 'error show' : 'error '} >
-          <div className='alert red' >
+          <div className={dark ? 'alert dark' : 'alert red'} >
             <img src={alert} alt="alert" />
             <p >Please make sure there are no blank fields.</p>
-          <MdClose 
-            onClick={() => setError(false)} 
-            size={20} 
-            color="#000"
-            style={{position: 'absolute', right: 20, top: 20, cursor: 'pointer' }
-          }/>
+            <MdClose
+              onClick={() => setError(false)}
+              size={20}
+              color={dark ? '#fff' : "#000"}
+              style={{ position: 'absolute', right: 20, top: 20, cursor: 'pointer' }
+              } />
           </div>
         </div>
 
         <div className={success ? 'success show' : 'success '} >
-          <div className='alert green' >
+          <div className={dark ? 'alert dark' : 'alert green'} >
             <img src={successimg} alt="success" />
             <p >Message succesfully sent.</p>
           </div>
@@ -387,20 +388,20 @@ function App() {
           <Routes>
             <Route path="/portfolio" element={
               <>
-                <Home location={home} dark={dark}  />
-                <Works 
-                  loading={loading} 
-                  location={works} 
-                  worksroute={false} 
-                  tab={tab} 
+                <Home location={home} dark={dark} />
+                <Works
+                  loading={loading}
+                  location={works}
+                  worksroute={false}
+                  tab={tab}
                   dark={dark}
-                  onActiveTav={onActiveTav} 
-                  resetWorks={resetWorks} 
+                  onActiveTav={onActiveTav}
+                  resetWorks={resetWorks}
                 />
-                <About 
+                <About
                   location={about}
                   dark={dark}
-                 />
+                />
                 <Contact
                   location={contact}
                   onSubmit={onSubmit}
@@ -409,17 +410,17 @@ function App() {
                   dark={dark}
                   onChange={onChange}
                 />
-                <Footer dark={dark}/>
+                <Footer dark={dark} />
               </>}
             />
-            <Route path="/portfolio/works" 
+            <Route path="/portfolio/works"
               element={
-                <Works loading={loading} worksroute={true} 
-                  onActiveTav={onActiveTav} 
-                  tab={tab} 
-                  dark={dark} 
-                  />
-                } 
+                <Works loading={loading} worksroute={true}
+                  onActiveTav={onActiveTav}
+                  tab={tab}
+                  dark={dark}
+                />
+              }
             />
             <Route
               path="*"

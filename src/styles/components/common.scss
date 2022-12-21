@@ -57,7 +57,6 @@
   background-color: rgba(0, 0, 0, 0.427);
 }
 
-
 .error {
   background-color: rgba(99, 99, 99, 0.415);
 }
@@ -79,6 +78,13 @@
   box-shadow: 0 20px 20px rgba(80, 80, 80, 0.214);
   @include sp {
     margin: 0 20px;
+  }
+    
+  &.dark {
+    color: $white;
+    transition: ease-in 0.2s;
+    background-color: #4d4d4d;
+    border: 1px solid $white;
   }
 
   &.red {

@@ -1,5 +1,4 @@
 .contact {
-  // height: calc(100vh - 75px);
   width: 100%;
   background-color: $secondary;
   padding: 100px 5%;
@@ -46,6 +45,11 @@
           background-color: $black;
           border: 1px solid $white;
           color: $white;
+
+          &:active, &:focus,
+          &:-internal-autofill-selected {
+            background-color: $black;
+          }
         }
 
         label {
