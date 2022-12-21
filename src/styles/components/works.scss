@@ -93,7 +93,6 @@
 
   &__container {
     display: flex;
-    justify-content: flex-start;
     flex-wrap: wrap;
     margin: 0 auto;
     gap: 10px;
@@ -102,19 +101,24 @@
 
   &__item {
     height: 300px;
-    width: 300px;
+    width: calc(33.33% - 10px);
     cursor: pointer;
     position: relative;
     overflow: hidden;
-    flex: auto;
     background-color: $white;
     border-radius: 10px;
     display: flex;
     align-items: center;
     justify-content: center;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.16);
-    // border: 1px solid rgb(185, 185, 185);
     transition: opacity 500ms ease-in-out;
+    @include mx980 {
+      height: 250px;
+    }
+    @include sp {
+      width: 100%;
+      height: 300px;
+    }
 
     &.dark {
       background-color: #817d7d;

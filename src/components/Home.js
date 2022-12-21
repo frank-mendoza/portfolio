@@ -1,14 +1,15 @@
 import React from 'react'
 
 import headerImg from '../img/pexels-miguel-á-padriñán-1591060.jpg'
+import headerWhite from '../img/white.png'
 import { AnimationOnScroll } from 'react-animation-on-scroll';
 
-const Home = ({ location }) => {
+const Home = ({ location, dark }) => {
 
   return (
-    <div className="home" id='home' ref={location}>
+    <div className={dark ? "home" : 'home dark' }id='home' ref={location}>
       <div className='home__img'>
-        <img src={headerImg} alt="pexels-miguel-á-padriñán-1591060" />
+        <img src={!dark ? headerWhite : headerImg} alt="pexels-miguel-á-padriñán-1591060" />
       </div>
       <AnimationOnScroll
         className="home__container"

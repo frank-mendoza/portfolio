@@ -59,18 +59,23 @@ function App() {
     document.body.style.overflow = 'unset';
   }
 
-  useEffect(() => { 
   let getDark = JSON.parse(localStorage.getItem('items'));
+  useEffect(() => { 
 
     if (getDark) {
       setDark(getDark);
+      document.body.style.background = '#2a2a2a'
+    }
+    if (getDark == false) {
+      setDark(getDark);
+      document.body.style.background = '#fff'
     }
 
     setTimeout(() => {
       setLoading(true)
       setShowSvg(true)
     }, 3000)
-  }, [])
+  }, [getDark])
 
   const onDarkTheme = () => {
     setDark(!dark)
@@ -382,7 +387,7 @@ function App() {
           <Routes>
             <Route path="/portfolio" element={
               <>
-                <Home location={home}  />
+                <Home location={home} dark={dark}  />
                 <Works 
                   loading={loading} 
                   location={works} 

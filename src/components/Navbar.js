@@ -98,7 +98,7 @@ const Navbar = ({
             {
               window.location.pathname === '/portfolio/works'
                 ?
-                <Link className='button' to={'/portfolio'}>Send Message</Link>
+                <Link className={!dark ? 'button' : 'button dark'} to={'/portfolio'}>Send Message</Link>
                 :
                 <Button 
                   dark={dark}

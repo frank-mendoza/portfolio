@@ -98,14 +98,14 @@ const Works = ({ onActiveTav, ...props }) => {
     <div className={!props.dark ? 'wrapper' : 'wrapper dark'}>
       <div className="works" id='works' ref={props.location}>
         <h2 className={!props.dark ? "title" : "title dark"}>Works</h2>
-        <div className={!props.dark ? "works__tablinks" : "works__tablinks bordered"}>
+        {/* <div className={!props.dark ? "works__tablinks" : "works__tablinks bordered"}>
           <ul className="works__filter list">
             <li className="active" data-filter="*" onClick={() => onActiveTav("all")}>All Categories</li>
             <li data-filter=".brand" onClick={() => onActiveTav("branding")}>Branding</li>
             <li data-filter=".work" onClick={() => onActiveTav("creative")}>Creative Work </li>
             <li data-filter=".web" onClick={() => onActiveTav("reactjs")}>ReactJS</li>
           </ul>
-        </div>
+        </div> */}
         <div className={data.length < 2 ? "works__container single" : 'works__container'}>
 
           {!props.loading ? <div style={{ textAlign: 'center', fontWeight: '700' }}>...loading</div> :

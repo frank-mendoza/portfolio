@@ -13,6 +13,11 @@
   @include sp {
     flex-direction: column;
   }
+
+  &.dark {
+    background-color: $white;
+    transition: ease 0.2s;
+  }
   
   &__img {
     position: absolute;

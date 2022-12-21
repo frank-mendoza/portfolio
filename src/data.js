@@ -48,30 +48,30 @@ const data = [
     link: 'https://frank-mendoza.github.io/estimating-calculator/',
     type: 2
   },
-  {
-    src: alexander,
-    alt: "pexels-alexander-grey-1209843",
-    title: "Sankyodo Estimating Calculator",
-    client: "Estimating Calculator",
-    link: 'http://risso.upward-test.com/',
-    type: 3
-  },
-  {
-    src: tianyi,
-    alt: "tianyi-ma",
-    title: "Sample Website Title",
-    client: "Client Project",
-    link: 'http://risso.upward-test.com/',
-    type: 3
-  },
-  {
-    src: designecologist,
-    alt: "designecologist",
-    title: "Sample Website Title",
-    client: "Client Project",
-    link: 'http://risso.upward-test.com/',
-    type: 1
-  },
+  // {
+  //   src: alexander,
+  //   alt: "pexels-alexander-grey-1209843",
+  //   title: "Sankyodo Estimating Calculator",
+  //   client: "Estimating Calculator",
+  //   link: 'http://risso.upward-test.com/',
+  //   type: 3
+  // },
+  // {
+  //   src: tianyi,
+  //   alt: "tianyi-ma",
+  //   title: "Sample Website Title",
+  //   client: "Client Project",
+  //   link: 'http://risso.upward-test.com/',
+  //   type: 3
+  // },
+  // {
+  //   src: designecologist,
+  //   alt: "designecologist",
+  //   title: "Sample Website Title",
+  //   client: "Client Project",
+  //   link: 'http://risso.upward-test.com/',
+  //   type: 1
+  // },
 ]
 
 export default data
