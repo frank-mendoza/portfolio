@@ -3,9 +3,9 @@ import beyoka from "./img/beyoka.png"
 import sakura from "./img/sakura roof.svg"
 import tokyo23fc from "./img/tokyo23fc-logo.svg"
 import simulator from "./img/simulator.png"
-import alexander from "./img/pexels-alexander-grey-1209843.png"
-import tianyi from "./img/tianyi-ma.png"
-import designecologist from "./img/designecologist.png"
+import eeco from "./img/eecql.png"
+// import tianyi from "./img/tianyi-ma.png"
+// import designecologist from "./img/designecologist.png"
 
 const data = [
   {
@@ -48,14 +48,14 @@ const data = [
     link: 'https://frank-mendoza.github.io/estimating-calculator/',
     type: 2
   },
-  // {
-  //   src: alexander,
-  //   alt: "pexels-alexander-grey-1209843",
-  //   title: "Sankyodo Estimating Calculator",
-  //   client: "Estimating Calculator",
-  //   link: 'http://risso.upward-test.com/',
-  //   type: 3
-  // },
+  {
+    src: eeco,
+    alt: "eeco",
+    title: "EECQL",
+    client: "健康塾QOLとは",
+    link: 'http://eeco.upward-test.com/eeco/',
+    type: 3
+  },
   // {
   //   src: tianyi,
   //   alt: "tianyi-ma",
