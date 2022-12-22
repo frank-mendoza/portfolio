@@ -74,16 +74,17 @@ const Works = ({ onActiveTav, ...props }) => {
   }
 
   const CustomItem = ({ item}) => (
-    <div
+    <a
+      href={item.link} target='_blank' 
       className={!props.dark ? 'works__item' : 'works__item dark'}
       style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
     >
       <img src={item.src} alt={item.alt} />
       <div className={!props.dark ? "works__description" :"works__description dark"}>
-        <a href={item.link} target='_blank' className='works__description-title'>{item.title}</a>
+        <p className='works__description-title'>{item.title}</p>
         <p className='works__description-client'>{item.client}</p>
       </div>
-    </div>
+    </a>
   )
 
   const showButton = () => {
