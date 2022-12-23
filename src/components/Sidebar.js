@@ -20,7 +20,7 @@ const Sidebar = ({ toggleChangeTheme,scrollToElement, openToggle, openSidebar, .
           { right: 0, width: '100%' }}
       onClick={() => openSidebar()}
     >
-      <div className="sidebar__wrapper">
+      <div className={props.dark ? 'sidebar__wrapper dark' : "sidebar__wrapper"}>
         <Link className='sidebar__logo'
           to={'/portfolio'}
           onClick={() => openSidebar()}
@@ -36,16 +36,16 @@ const Sidebar = ({ toggleChangeTheme,scrollToElement, openToggle, openSidebar, .
               />
             </li>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(true,)}>
-              <GrHomeRounded size={20} stroke='#fff' />
+              <GrHomeRounded size={20} className={props.dark ? 'path' : ''} />
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.works)}>
-              <GrProjects size={20} stroke='#fff' />
+              <GrProjects size={20}  className={props.dark ? 'path' : ''}/>
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.about)}>
-              <GrCatalog size={20} stroke='#fff' />
+              <GrCatalog size={20}   className={props.dark ? 'path' : ''}/>
             </Link>
             <Link to={'/portfolio'} className="sidebar__links" onClick={() => scrollToElement(false, props.contact)}>
-              <GrMailOption size={20} stroke='#fff' />
+              <GrMailOption size={20}  className={props.dark ? 'path' : ''} />
             </Link>
           </ul>
         </div>

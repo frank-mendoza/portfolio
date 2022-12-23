@@ -57,8 +57,7 @@
   background-color: rgba(0, 0, 0, 0.427);
 }
 
-
-.error {
+.error, .success {
   background-color: rgba(99, 99, 99, 0.415);
 }
 
@@ -79,6 +78,13 @@
   box-shadow: 0 20px 20px rgba(80, 80, 80, 0.214);
   @include sp {
     margin: 0 20px;
+  }
+    
+  &.dark {
+    color: $white;
+    transition: ease-in 0.2s;
+    background-color: #4d4d4d;
+    border: 1px solid $white;
   }
 
   &.red {
@@ -116,7 +122,10 @@
     z-index: 10;
     visibility: visible;
     transition: ease 0.5;
-    background: $primary;
+  }
+
+  &.dark {
+    background-color: $dark;
   }
 }
 
@@ -137,26 +146,6 @@
     opacity: 0;
     width: 0;
     height: 0;
-
-    &:checked + .round {
-      background-color: $primary;
-      border: 1px solid $white;
-    }
-  
-    &:focus + .round {
-      box-shadow: 0 0 1px #2196F3;
-    }
-
-    &:checked + .round:before {
-      -webkit-transform: translateX(26px);
-      -ms-transform: translateX(26px);
-      transform: translateX(26px);
-      @include sp {
-        -webkit-transform: translateX(19px);
-        -ms-transform: translateX(19px);
-        transform: translateX(19px);
-      }
-    }
   }
 
   .round {
@@ -171,6 +160,22 @@
     transition: .4s;
     border-radius: 34px;
     border: 1px solid transparent;
+
+    &.dark {
+      background-color: transparent;
+      border: 1px solid $white;
+  
+      &:before {
+        -webkit-transform: translateX(26px);
+        -ms-transform: translateX(26px);
+        transform: translateX(26px);
+        @include sp {
+          -webkit-transform: translateX(19px);
+          -ms-transform: translateX(19px);
+          transform: translateX(19px);
+        }
+      }
+    }
 
     &::before {
       position: absolute;

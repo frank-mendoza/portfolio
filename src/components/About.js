@@ -55,9 +55,27 @@ const About = ({ location, dark }) => {
           </div>
         </div>
 
-        <Descriptions grid={false} src={collab} animateIn="animate__bounceInRight" alt="collab" title='Collaborative' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
-        <Descriptions grid={true} src={frameworks} animateIn="animate__bounceInLeft" alt="frameworks" title='Frontend Frameworks' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
-        <Descriptions grid={false} src={responsive} animateIn="animate__bounceInRight" alt="responsive " title='Mobile Responsiveness' text=' Lorem, ipsum dolor sit amet consectetur adipisicing elit. Iure magni quaerat expedita mollitia enim magnam excepturi praesentium inventore atque totam laborum dicta quibusdam aut molestias, modi eum quisquam fugiat nobis.' />
+        <Descriptions 
+          grid={false} 
+          src={collab} 
+          animateIn="animate__bounceInRight" 
+          alt="collab" 
+          title='Collaborative' 
+          text='Collaborative with other developers. Communication is the key for a better result in development. ' />
+        <Descriptions 
+          grid={true} 
+          src={frameworks} 
+          animateIn="animate__bounceInLeft" 
+          alt="frameworks" 
+          title='Frontend Frameworks' 
+          text='With the use of new frameworks and tech, development becomes more exciting and fun.' />
+        <Descriptions 
+          grid={false} 
+          src={responsive} 
+          animateIn="animate__bounceInRight" 
+          alt="responsive " 
+          title='Mobile Responsiveness' 
+          text='Responsive websites is the key for a better mobile viewing of a website, as frontend developer, this is one of my assets.' />
 
         <div className="about__carousel">
           <h2 className={!dark ? "title" : "title dark"}>What I Currently Knew?</h2>
@@ -90,7 +108,10 @@ const About = ({ location, dark }) => {
       <div className="about__wrapper">
         <div className="about__contents" >
           <h2 className="title">Connect with me</h2>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nam eos exercitationem, magni facilis molestias dicta numquam saepe temporibus sunt enim quibusdam tempore consequuntur placeat voluptatem architecto ad ut harum quo.</p>
+          <p>Together let's create a wonderful connection and build websites.
+            <br />
+            Please  free to contact me.
+          </p>
         </div>
       </div>
     </div>

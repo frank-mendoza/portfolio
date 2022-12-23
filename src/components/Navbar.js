@@ -98,9 +98,12 @@ const Navbar = ({
             {
               window.location.pathname === '/portfolio/works'
                 ?
-                <Link className='button' to={'/portfolio'}>Send Message</Link>
+                <Link className={!dark ? 'button' : 'button dark'} to={'/portfolio'}>Send Message</Link>
                 :
-                <Button name='Send Message' onClick={() => scrollToElement(false, contact)}
+                <Button 
+                  dark={dark}
+                  name='Send Message' 
+                  onClick={() => scrollToElement(false, contact)}
                 />
             }
           </div>

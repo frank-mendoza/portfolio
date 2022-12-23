@@ -1,69 +1,59 @@
-import sound from "./img/pexels-sound-on-3756879.png"
-import tranmautritam from "./img/pexels-tranmautritam-251225.png"
-import magda from "./img/pexels-magda-ehlers-1279813.png"
-import fauxels from "./img/pexels-fauxels-3183197.png"
-import thisisengineering from "./img/pexels-thisisengineering-3913025.png"
-import alexander from "./img/pexels-alexander-grey-1209843.png"
-import tianyi from "./img/tianyi-ma.png"
-import designecologist from "./img/designecologist.png"
+import todoapp from "./img/todo.png"
+import beyoka from "./img/beyoka.png"
+import sakura from "./img/sakura roof.svg"
+import tokyo23fc from "./img/tokyo23fc-logo.svg"
+import simulator from "./img/simulator.png"
+import eeco from "./img/eecql.png"
 
 const data = [
   {
-    src: sound,
-    alt: "pexels-sound-on-3756879",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: todoapp,
+    alt: "risso",
+    title: "Todo App Using Firebase",
+    client: "Todo list that uses firebase database",
+    link: 'https://frank-mendoza.github.io/TodoApp-FIrebase/',
     type: 1
   },
   {
-    src: tranmautritam,
-    alt: "pexels-tranmautritam-251225",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: beyoka,
+    alt: "beyoka",
+    title: "Beyoka",
+    client: "Beyoka",
+    link: 'https://beyoka.com',
     type: 2
   },
   {
-    src: magda,
-    alt: "pexels-magda-ehlers-1279813",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: sakura,
+    alt: "sakura roof",
+    title: "Sakura Roof",
+    client: "Sakura Roof",
+    link: 'https://upward-test.sakura.ne.jp/sakuraroof/',
     type: 2
   },
   {
-    src: fauxels,
-    alt: "pexels-fauxels-3183197",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: tokyo23fc,
+    alt: "tokyo23fc",
+    title: "Tokyo 23FC",
+    client: "tokyo23fc",
+    link: 'http://tokyo23fc.upward-test.com/',
     type: 3
   },
   {
-    src: thisisengineering,
-    alt: "pexels-thisisengineering-3913025",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: simulator,
+    alt: "simulator",
+    title: "Sankyodo Estimator",
+    client: "Estimating Calculator",
+    link: 'https://frank-mendoza.github.io/estimating-calculator/',
     type: 2
   },
   {
-    src: alexander,
-    alt: "pexels-alexander-grey-1209843",
-    title: "Sample Website Title",
-    client: "Client Project",
+    src: eeco,
+    alt: "eeco",
+    title: "EECQL",
+    client: "健康塾QOLとは",
+    link: 'http://eeco.upward-test.com/eeco/',
     type: 3
-  },
-  {
-    src: tianyi,
-    alt: "tianyi-ma",
-    title: "Sample Website Title",
-    client: "Client Project",
-    type: 3
-  },
-  {
-    src: designecologist,
-    alt: "designecologist",
-    title: "Sample Website Title",
-    client: "Client Project",
-    type: 1
-  },
+  }
 ]
 
 export default data

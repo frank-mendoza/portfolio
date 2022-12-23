@@ -1,5 +1,4 @@
 .contact {
-  // height: calc(100vh - 75px);
   width: 100%;
   background-color: $secondary;
   padding: 100px 5%;
@@ -26,7 +25,7 @@
     color: $text;
 
     &.dark {
-      color: $white;
+      color: #272416;
     }
 
     &-items {
@@ -39,6 +38,23 @@
       @include sp {
         flex-direction: column;
         justify-content: flex-start;
+      }
+
+      &.bordered {
+        input, textarea {
+          background-color: $black;
+          border: 1px solid $white;
+          color: $white;
+
+          &:active, &:focus,
+          &:-internal-autofill-selected {
+            background-color: $black;
+          }
+        }
+
+        label {
+          color: $white;
+        }
       }
 
       label {
@@ -94,5 +110,7 @@
     display: flex;
     margin-top: 50px;
     width: 100%;
+    z-index: 1;
+    position: relative;
   }
 }

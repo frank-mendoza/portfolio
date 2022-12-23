@@ -16,6 +16,8 @@
     "react-scripts": "5.0.1",
     "react-spinners": "^0.13.7",
     "sass": "^1.54.9",
+    "smooth-scrollbar": "^8.8.1",
+    "smooth-scrollbar-react": "^2.4.1",
     "swiper": "^8.4.2",
     "web-vitals": "^2.1.4"
   },
