@@ -1,6 +1,6 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
-
+import { getDatabase, onValue } from 'firebase/database';
 import { motion } from "framer-motion";
 
 import 'swiper/css';
@@ -21,9 +21,16 @@ import HashLoader from 'react-spinners/HashLoader';
 import alert from './img/exclamation-mark.png'
 import successimg from './img/check.png'
 import { MdClose } from 'react-icons/md';
-import { Scrollbar } from 'smooth-scrollbar-react';
+
+import { ref, push } from "firebase/database";
+
+// @ts-ignore
+import firebaseApp from "./firebase.ts";
 
 function App() {
+
+  const db = getDatabase(firebaseApp);
+
   const [dark, setDark] = useState(false)
   const [error, setError] = useState(false)
   const [toggle, setToggle] = useState(true)
@@ -32,6 +39,7 @@ function App() {
   const [success, setSuccess] = useState(false)
   const [showSvg, setShowSvg] = useState(false)
   const [onHover, setonHover] = useState(false)
+  const [newRecord, setNewRecord] = useState([])
   const [tab, setTabs] = useState({
     all: true,
     branding: false,
@@ -61,7 +69,24 @@ function App() {
   }
 
   let getDark = JSON.parse(localStorage.getItem('items'));
+
   useEffect(() => {
+
+    const recordRef = ref(db, "/porfolio/");
+
+    onValue(recordRef, (data) => {
+      const record = data.val()
+      const newData = [];
+
+      for (let id in record) {
+        newData.push({ id, ...record[id] });
+      }
+      
+      setNewRecord(newData)
+      console.log('====================================');
+      console.log(newRecord);
+      console.log('====================================');
+    }, [])
 
     if (getDark) {
       setDark(getDark);
@@ -395,6 +420,7 @@ function App() {
                   worksroute={false}
                   tab={tab}
                   dark={dark}
+                  newRecord={newRecord}
                   onActiveTav={onActiveTav}
                   resetWorks={resetWorks}
                 />

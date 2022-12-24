@@ -12,18 +12,18 @@ const Works = ({ onActiveTav, ...props }) => {
   let creative = props.tab.creative
   let reactjs = props.tab.reactjs
 
-  
+
   let slicedata = data.slice(0, 6)
   let record = []
-  
+
   window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
-  
+
   let brandItems = record.filter((e) => e.type === 1)
   let creativeItems = record.filter((e) => e.type === 2)
   let reactjsItems = record.filter((e) => e.type === 3)
 
   const WorkItem = () => {
-  
+
 
     if (data.length === 0) {
       return <span>No records found</span>
@@ -60,7 +60,7 @@ const Works = ({ onActiveTav, ...props }) => {
       }
       else if (reactjs) {
         return reactjsItems.map((item, key) => {
-          
+
           return (
             <CustomItem
               key={key}
@@ -73,25 +73,29 @@ const Works = ({ onActiveTav, ...props }) => {
 
   }
 
-  const CustomItem = ({ item}) => (
-    <a
-      href={item.link} target='_blank' 
-      className={!props.dark ? 'works__item' : 'works__item dark'}
-      style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
-    >
-      <img src={item.src} alt={item.alt} />
-      <div className={!props.dark ? "works__description" :"works__description dark"}>
-        <p className='works__description-title'>{item.title}</p>
-        <p className='works__description-client'>{item.client}</p>
-      </div>
-    </a>
-  )
+  const CustomItem = ({ item }) => {
+
+    props.newRecord.map((record) => {
+      return <a
+        key={record.id}
+        href={record.link} target='_blank'
+        className={!props.dark ? 'works__item' : 'works__item dark'}
+        style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
+      >
+        <img src={record.image} alt={record.title} />
+        <div className={!props.dark ? "works__description" : "works__description dark"}>
+          <p className='works__description-title'>{record.title}</p>
+          <p className='works__description-client'>{record.details}</p>
+        </div>
+      </a>
+    })
+  }
 
   const showButton = () => {
-    return  props.worksroute || data.length === 0 || data.length <= 6 ? null :
-        <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
-          <Button dark={props.dark} name='See all'  />
-        </Link>
+    return props.worksroute || data.length === 0 || data.length <= 6 ? null :
+      <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
+        <Button dark={props.dark} name='See all' />
+      </Link>
 
   }
 
