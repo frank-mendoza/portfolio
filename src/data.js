@@ -1,19 +1,17 @@
-import risso from "./img/risso.png"
+import todoapp from "./img/todo.png"
 import beyoka from "./img/beyoka.png"
 import sakura from "./img/sakura roof.svg"
 import tokyo23fc from "./img/tokyo23fc-logo.svg"
 import simulator from "./img/simulator.png"
 import eeco from "./img/eecql.png"
-// import tianyi from "./img/tianyi-ma.png"
-// import designecologist from "./img/designecologist.png"
 
 const data = [
   {
-    src: risso,
+    src: todoapp,
     alt: "risso",
-    title: "Risso",
-    client: "Risso",
-    link: 'http://risso.upward-test.com/',
+    title: "Todo App Using Firebase",
+    client: "Todo list that uses firebase database",
+    link: 'https://frank-mendoza.github.io/TodoApp-FIrebase/',
     type: 1
   },
   {
@@ -55,23 +53,7 @@ const data = [
     client: "健康塾QOLとは",
     link: 'http://eeco.upward-test.com/eeco/',
     type: 3
-  },
-  // {
-  //   src: tianyi,
-  //   alt: "tianyi-ma",
-  //   title: "Sample Website Title",
-  //   client: "Client Project",
-  //   link: 'http://risso.upward-test.com/',
-  //   type: 3
-  // },
-  // {
-  //   src: designecologist,
-  //   alt: "designecologist",
-  //   title: "Sample Website Title",
-  //   client: "Client Project",
-  //   link: 'http://risso.upward-test.com/',
-  //   type: 1
-  // },
+  }
 ]
 
 export default data
