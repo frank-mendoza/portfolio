@@ -8,7 +8,7 @@ import eeco from "./img/eecql.png"
 const data = [
   {
     src: todoapp,
-    alt: "risso",
+    alt: "Todo app",
     title: "Todo App Using Firebase",
     client: "Todo list that uses firebase database",
     link: 'https://frank-mendoza.github.io/TodoApp-FIrebase/',
