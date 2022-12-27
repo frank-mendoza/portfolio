@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.d580411b.css",
-    "main.js": "/portfolio/static/js/main.a8dd2c63.js",
+    "main.css": "/portfolio/static/css/main.b047e6e6.css",
+    "main.js": "/portfolio/static/js/main.1a6f800b.js",
     "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
     "static/media/pexels-miguel-á-padriñán-1591060.jpg": "/portfolio/static/media/pexels-miguel-á-padriñán-1591060.53ca9852cf2aa967fe88.jpg",
     "static/media/white.png": "/portfolio/static/media/white.d805efb60e2c518a3c04.png",
@@ -32,11 +32,11 @@
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.b93f5448d75fbd0161cfe8a2441cd055.svg",
     "index.html": "/portfolio/index.html",
-    "main.d580411b.css.map": "/portfolio/static/css/main.d580411b.css.map",
-    "main.a8dd2c63.js.map": "/portfolio/static/js/main.a8dd2c63.js.map"
+    "main.b047e6e6.css.map": "/portfolio/static/css/main.b047e6e6.css.map",
+    "main.1a6f800b.js.map": "/portfolio/static/js/main.1a6f800b.js.map"
   },
   "entrypoints": [
-    "static/css/main.d580411b.css",
-    "static/js/main.a8dd2c63.js"
+    "static/css/main.b047e6e6.css",
+    "static/js/main.1a6f800b.js"
   ]
 }
