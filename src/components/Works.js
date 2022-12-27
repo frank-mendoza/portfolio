@@ -1,125 +1,122 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
 
-import Button from '../customComponents/Button'
-import data from '../data'
-
+import Button from "../customComponents/Button";
 
 const Works = ({ onActiveTav, ...props }) => {
+  const all = props.tab.all;
+  const personal = props.tab.personal;
+  const member = props.tab.member;
 
-  let all = props.tab.all
-  let branding = props.tab.branding
-  let creative = props.tab.creative
-  let reactjs = props.tab.reactjs
+  let slicedata = props.newRecord.slice(0, 6);
+  let record = [];
 
+  window.location.pathname === "/portfolio/works"
+    ? (record = props.newRecord)
+    : (record = slicedata);
 
-  let slicedata = data.slice(0, 6)
-  let record = []
-
-  window.location.pathname === '/portfolio/works' ? record = data : record = slicedata
-
-  let brandItems = record.filter((e) => e.type === 1)
-  let creativeItems = record.filter((e) => e.type === 2)
-  let reactjsItems = record.filter((e) => e.type === 3)
+  let personalData = record.filter((e) => e.type === 0);
+  let memberData = record.filter((e) => e.type === 1);
 
   const WorkItem = () => {
-
-
-    if (data.length === 0) {
-      return <span>No records found</span>
+    if (props.newRecord.length === 0) {
+      return <p style={{textAlign: 'center', color:'white', margin: '1em auto'}}>No records found</p>;
     } else {
       if (all) {
         return record.map((item, key) => {
-          return (
-            <CustomItem
-              key={key}
-              item={item}
-            />
-          )
-        })
-      }
-      else if (branding) {
-        return brandItems.map((item, key) => {
-          return (
-            <CustomItem
-              key={key}
-              item={item}
-            />
-          )
-        })
-      }
-      else if (creative) {
-        return creativeItems.map((item, key) => {
-          return (
-            <CustomItem
-              key={key}
-              item={item}
-            />
-          )
-        })
-      }
-      else if (reactjs) {
-        return reactjsItems.map((item, key) => {
-
-          return (
-            <CustomItem
-              key={key}
-              item={item}
-            />
-          )
-        })
+          return <CustomItem key={key} item={item} />;
+        });
+      } else if (personal) {
+        return personalData.map((item, key) => {
+          return <CustomItem key={key} item={item} />;
+        });
+      } else {
+        return memberData.map((item, key) => {
+          return <CustomItem key={key} item={item} />;
+        });
       }
     }
+  };
 
-  }
-
-  const CustomItem = ({ item }) => {
-
-    props.newRecord.map((record) => {
-      return <a
-        key={record.id}
-        href={record.link} target='_blank'
-        className={!props.dark ? 'works__item' : 'works__item dark'}
-        style={{ opacity: !props.loading ? 0 : 1, transition: 'ease-in 1s' }}
+  const CustomItem = ({ item }) => (
+    <a
+      key={item.id}
+      href={item.link}
+      target="_blank"
+      className={!props.dark ? "works__item" : "works__item dark"}
+      style={{ opacity: !props.loading ? 0 : 1, transition: "ease-in 1s" }}
+    >
+      <img src={item.image} alt={item.title} />
+      <div
+        className={
+          !props.dark ? "works__description" : "works__description dark"
+        }
       >
-        <img src={record.image} alt={record.title} />
-        <div className={!props.dark ? "works__description" : "works__description dark"}>
-          <p className='works__description-title'>{record.title}</p>
-          <p className='works__description-client'>{record.details}</p>
-        </div>
-      </a>
-    })
-  }
+        <p className="works__description-title">{item.title}</p>
+        <p className="works__description-client">{item.details}</p>
+      </div>
+    </a>
+  );
 
   const showButton = () => {
-    return props.worksroute || data.length === 0 || data.length <= 6 ? null :
-      <Link className="works__button" to='/portfolio/works' onClick={() => props.resetWorks()}>
-        <Button dark={props.dark} name='See all' />
+    return props.worksroute || props.newRecord.length === 0 || props.newRecord.length <= 6 ? null : (
+      <Link
+        className="works__button"
+        to="/portfolio/works"
+        onClick={() => props.resetWorks()}
+      >
+        <Button dark={props.dark} name="See all" />
       </Link>
-
-  }
+    );
+  };
 
   return (
-    <div className={!props.dark ? 'wrapper' : 'wrapper dark'}>
-      <div className="works" id='works' ref={props.location}>
+    <div className={!props.dark ? "wrapper" : "wrapper dark"}>
+      <div className="works" id="works" ref={props.location}>
         <h2 className={!props.dark ? "title" : "title dark"}>Works</h2>
-        {/* <div className={!props.dark ? "works__tablinks" : "works__tablinks bordered"}>
+        <div
+          className={
+            !props.dark ? "works__tablinks" : "works__tablinks bordered"
+          }
+        >
           <ul className="works__filter list">
-            <li className="active" data-filter="*" onClick={() => onActiveTav("all")}>All Categories</li>
-            <li data-filter=".brand" onClick={() => onActiveTav("branding")}>Branding</li>
-            <li data-filter=".work" onClick={() => onActiveTav("creative")}>Creative Work </li>
-            <li data-filter=".web" onClick={() => onActiveTav("reactjs")}>ReactJS</li>
+            <li
+              className={!all ? " w-link" : 'active w-link'}
+              onClick={() => onActiveTav("all")}
+            >
+              All Categories
+            </li>
+            <li 
+              className={!personal ? " w-link" : 'active w-link'}
+              onClick={() => onActiveTav("personal")}
+            >
+              Personal
+            </li>
+            <li 
+              className={!member ? " w-link" : 'active w-link'}
+              onClick={() => onActiveTav("member")}
+            >
+              Member on a team
+            </li>
           </ul>
-        </div> */}
-        <div className={data.length < 2 ? "works__container single" : 'works__container'}>
-
-          {!props.loading ? <div style={{ textAlign: 'center', fontWeight: '700' }}>...loading</div> :
-            WorkItem()}
+        </div>
+        <div
+          className={
+            props.newRecord.length < 2 ? "works__container single" : "works__container"
+          }
+        >
+          {!props.loading ? (
+            <div style={{ textAlign: "center", fontWeight: "700" }}>
+              ...loading
+            </div>
+          ) : (
+            WorkItem()
+          )}
         </div>
         {showButton()}
       </div>
     </div>
-  )
-}
+  );
+};
 
-export default Works
+export default Works;

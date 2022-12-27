@@ -186,7 +186,7 @@
       margin-top: 20px;
       line-height: 1.5em;
       @include sp {
-        text-align: justify;
+        text-align: center;
         font-size: 18px;
       }
     }
@@ -206,7 +206,7 @@
   }
 
   &__carousel-img {
-    width: 100px;
+    width: 90px;
     @include sp {
       width: 80px;
     }
