@@ -4,22 +4,24 @@ import { Link } from "react-router-dom";
 import Button from "../customComponents/Button";
 
 const Works = ({ onActiveTav, ...props }) => {
+
+  const { newRecord } = props
   const all = props.tab.all;
   const personal = props.tab.personal;
   const member = props.tab.member;
 
-  let slicedata = props.newRecord.slice(0, 6);
+  let slicedata = newRecord.slice(0, 6);
   let record = [];
 
   window.location.pathname === "/portfolio/works"
-    ? (record = props.newRecord)
+    ? (record = newRecord)
     : (record = slicedata);
 
   let personalData = record.filter((e) => e.type === 0);
   let memberData = record.filter((e) => e.type === 1);
 
   const WorkItem = () => {
-    if (props.newRecord.length === 0) {
+    if (newRecord.length === 0) {
       return <p style={{textAlign: 'center', color:'white', margin: '1em auto'}}>No records found</p>;
     } else {
       if (all) {
@@ -59,7 +61,7 @@ const Works = ({ onActiveTav, ...props }) => {
   );
 
   const showButton = () => {
-    return props.worksroute || props.newRecord.length === 0 || props.newRecord.length <= 6 ? null : (
+    return props.worksroute || newRecord.length === 0 || newRecord.length <= 6 ? null : (
       <Link
         className="works__button"
         to="/portfolio/works"
@@ -102,7 +104,7 @@ const Works = ({ onActiveTav, ...props }) => {
         </div>
         <div
           className={
-            props.newRecord.length < 2 ? "works__container single" : "works__container"
+            newRecord.length < 2 ? "works__container single" : "works__container"
           }
         >
           {!props.loading ? (

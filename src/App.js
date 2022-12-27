@@ -81,7 +81,6 @@ function App() {
         }
 
         setNewRecord(newData);
-        console.log(newData);
       },
       []
     );
@@ -414,6 +413,9 @@ function App() {
                 worksroute={true}
                 onActiveTav={onActiveTav}
                 tab={tab}
+                location={works}
+                resetWorks={resetWorks}
+                newRecord={newRecord}
                 dark={dark}
               />
             }
