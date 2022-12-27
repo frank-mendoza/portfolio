@@ -4,8 +4,7 @@ import { Link } from "react-router-dom";
 import Button from "../customComponents/Button";
 
 const Works = ({ onActiveTav, ...props }) => {
-
-  const { newRecord } = props
+  const { newRecord } = props;
   const all = props.tab.all;
   const personal = props.tab.personal;
   const member = props.tab.member;
@@ -22,7 +21,11 @@ const Works = ({ onActiveTav, ...props }) => {
 
   const WorkItem = () => {
     if (newRecord.length === 0) {
-      return <p style={{textAlign: 'center', color:'white', margin: '1em auto'}}>No records found</p>;
+      return (
+        <p style={{ textAlign: "center", color: "white", margin: "1em auto" }}>
+          No records found
+        </p>
+      );
     } else {
       if (all) {
         return record.map((item, key) => {
@@ -61,7 +64,9 @@ const Works = ({ onActiveTav, ...props }) => {
   );
 
   const showButton = () => {
-    return props.worksroute || newRecord.length === 0 || newRecord.length <= 6 ? null : (
+    return props.worksroute ||
+      newRecord.length === 0 ||
+      newRecord.length <= 6 ? null : (
       <Link
         className="works__button"
         to="/portfolio/works"
@@ -74,7 +79,15 @@ const Works = ({ onActiveTav, ...props }) => {
 
   return (
     <div className={!props.dark ? "wrapper" : "wrapper dark"}>
-      <div className="works" id="works" ref={props.location}>
+      <div
+        className="works"
+        id="works"
+        ref={props.location}
+        style={{
+          paddingTop:
+            window.location.pathname === "/portfolio/works" ? "120px" : "",
+        }}
+      >
         <h2 className={!props.dark ? "title" : "title dark"}>Works</h2>
         <div
           className={
@@ -83,19 +96,19 @@ const Works = ({ onActiveTav, ...props }) => {
         >
           <ul className="works__filter list">
             <li
-              className={!all ? " w-link" : 'active w-link'}
+              className={!all ? " w-link" : "active w-link"}
               onClick={() => onActiveTav("all")}
             >
               All Categories
             </li>
-            <li 
-              className={!personal ? " w-link" : 'active w-link'}
+            <li
+              className={!personal ? " w-link" : "active w-link"}
               onClick={() => onActiveTav("personal")}
             >
               Personal
             </li>
-            <li 
-              className={!member ? " w-link" : 'active w-link'}
+            <li
+              className={!member ? " w-link" : "active w-link"}
               onClick={() => onActiveTav("member")}
             >
               Member on a team
@@ -104,7 +117,9 @@ const Works = ({ onActiveTav, ...props }) => {
         </div>
         <div
           className={
-            newRecord.length < 2 ? "works__container single" : "works__container"
+            newRecord.length < 2
+              ? "works__container single"
+              : "works__container"
           }
         >
           {!props.loading ? (
