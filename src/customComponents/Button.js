@@ -1,8 +1,9 @@
 import React from 'react'
 
-const Button = ({ name, dark, onClick }) => (
+const Button = ({ name, dark, onClick,black, width }) => (
   <button
-    className={!dark ? 'button' : 'button dark'}
+    className={!dark ? black ? 'button black': 'button' : 'button dark'}
+    style={{width: width ? '150px' : ''}}
     onClick={() =>
       onClick ?
         onClick() : null

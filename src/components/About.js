@@ -136,16 +136,6 @@ const About = ({ location, dark }) => {
           </Swiper>
         </div>
       </div>
-      <div className="about__wrapper">
-        <div className="about__contents">
-          <h2 className="title">Connect with me</h2>
-          <p>
-            Together let's create a wonderful connection and build websites.
-            <br />
-            Please free to contact me.
-          </p>
-        </div>
-      </div>
     </div>
   );
 };
