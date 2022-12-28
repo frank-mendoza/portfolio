@@ -84,7 +84,7 @@
     color: $white;
     transition: ease-in 0.2s;
     background-color: #4d4d4d;
-    border: 1px solid $white;
+    box-shadow: 0 0 20px #0000008c;
   }
 
   &.red {
