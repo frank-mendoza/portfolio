@@ -22,7 +22,7 @@ import alert from "./img/exclamation-mark.png";
 import successimg from "./img/check.png";
 import { MdClose } from "react-icons/md";
 
-import { ref, push } from "firebase/database";
+import { ref } from "firebase/database";
 
 // @ts-ignore
 import firebaseApp from "./firebase.ts";
@@ -95,9 +95,12 @@ function App() {
     }
 
     setTimeout(() => {
-      setLoading(true);
       setShowSvg(true);
+      setLoading(true);
     }, 3000);
+    setLoader(false);
+    setSuccess(false);
+    setError(false);
   }, [getDark]);
 
   const onDarkTheme = () => {
@@ -320,34 +323,40 @@ function App() {
     </div>
   ) : (
     <>
-      <div className={loader ? "loader show" : "loader"}>
-        <HashLoader color="#f7b947" />
-      </div>
-
-      <div className={error ? "error show" : "error "}>
-        <div className={dark ? "alert dark" : "alert red"}>
-          <img src={alert} alt="alert" />
-          <p>Please make sure there are no blank fields.</p>
-          <MdClose
-            onClick={() => setError(false)}
-            size={20}
-            color={dark ? "#fff" : "#000"}
-            style={{
-              position: "absolute",
-              right: 20,
-              top: 20,
-              cursor: "pointer",
-            }}
-          />
+      {loader ? (
+        <div className="loader show">
+          <HashLoader color="#f7b947" />
         </div>
-      </div>
+      ) : null}
 
-      <div className={success ? "success show" : "success "}>
-        <div className={dark ? "alert dark" : "alert green"}>
-          <img src={successimg} alt="success" />
-          <p>Message succesfully sent.</p>
+      {error ? (
+        <div className="error show">
+          <div className={dark ? "alert dark" : "alert red"}>
+            <img src={alert} alt="alert" />
+            <p>Please make sure there are no blank fields.</p>
+            <MdClose
+              onClick={() => setError(false)}
+              size={20}
+              color={dark ? "#fff" : "#000"}
+              style={{
+                position: "absolute",
+                right: 20,
+                top: 20,
+                cursor: "pointer",
+              }}
+            />
+          </div>
         </div>
-      </div>
+      ) : null}
+
+      {success ? (
+        <div className="success show">
+          <div className={dark ? "alert dark" : "alert green"}>
+            <img src={successimg} alt="success" />
+            <p>Message succesfully sent.</p>
+          </div>
+        </div>
+      ) : null}
 
       <Router>
         <Navbar

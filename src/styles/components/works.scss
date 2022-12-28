@@ -175,6 +175,13 @@
         background-color: $primary;
         transition: ease 0.2s;
       }
+
+      .works__description-client {
+        transform: translate(0, 0);
+        opacity: 1;
+        position: relative;
+        transition: ease 0.2s;
+      }
     }
 
     &.dark {
@@ -223,6 +230,7 @@
     z-index: 1;
     text-decoration: none;
     margin-bottom: 20px;
+    transition: ease 0.2s;
     @include sp {
       font-size: 20px;
     }
@@ -232,6 +240,10 @@
     color: inherit;
     font-size: 15px;
     z-index: 1;
+    transform: translate(0px, 40px);
+    position: absolute;
+    opacity: 0;
+    transition: ease;
   }
   
   &__button {
