@@ -1,10 +1,9 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.4e38a210.css",
-    "main.js": "/portfolio/static/js/main.16b2008a.js",
-    "static/media/pexels-eduardo-dutra-2115217.svg": "/portfolio/static/media/pexels-eduardo-dutra-2115217.e47a2b34f99178f2c942.svg",
-    "static/media/pexels-miguel-á-padriñán-1591060.jpg": "/portfolio/static/media/pexels-miguel-á-padriñán-1591060.e5ef86dbd9efca5c02f3.jpg",
-    "static/media/white.png": "/portfolio/static/media/white.3b2ebd210157e44474a2.png",
+    "main.css": "/portfolio/static/css/main.93046012.css",
+    "main.js": "/portfolio/static/js/main.e8f4d7ee.js",
+    "static/media/hero.png": "/portfolio/static/media/hero.5ec07b1de421bf4b1e8f.png",
+    "static/media/contact.png": "/portfolio/static/media/contact.2b95d12a4fd1d7ca4e53.png",
     "static/media/beyoka.png": "/portfolio/static/media/beyoka.a6a17cb9161eded60877.png",
     "static/media/simulator.png": "/portfolio/static/media/simulator.cc9fad027b8515e5445e.png",
     "static/media/adobexd.png": "/portfolio/static/media/adobexd.26af061627cf107d32c8.png",
@@ -31,12 +30,14 @@
     "static/media/sakura roof.svg": "/portfolio/static/media/sakura roof.e4263c57ae054ac9e5d68bc257dbcedc.svg",
     "static/media/header-01.svg": "/portfolio/static/media/header-01.b4e452e988d5bac12737eb0b5c679af5.svg",
     "static/media/logo.svg": "/portfolio/static/media/logo.b93f5448d75fbd0161cfe8a2441cd055.svg",
+    "static/media/liquid-cheese-dark.svg": "/portfolio/static/media/liquid-cheese-dark.f5f388dc73247ab11e28.svg",
+    "static/media/liquid-cheese.svg": "/portfolio/static/media/liquid-cheese.5acbbba089001bab53a1.svg",
     "index.html": "/portfolio/index.html",
-    "main.4e38a210.css.map": "/portfolio/static/css/main.4e38a210.css.map",
-    "main.16b2008a.js.map": "/portfolio/static/js/main.16b2008a.js.map"
+    "main.93046012.css.map": "/portfolio/static/css/main.93046012.css.map",
+    "main.e8f4d7ee.js.map": "/portfolio/static/js/main.e8f4d7ee.js.map"
   },
   "entrypoints": [
-    "static/css/main.4e38a210.css",
-    "static/js/main.16b2008a.js"
+    "static/css/main.93046012.css",
+    "static/js/main.e8f4d7ee.js"
   ]
 }
