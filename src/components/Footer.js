@@ -1,5 +1,5 @@
 import React from "react";
-import { BsMessenger, BsLinkedin, BsSkype } from "react-icons/bs";
+import { BsMessenger, BsLinkedin, BsSkype, BsWhatsapp } from "react-icons/bs";
 import { SiGmail } from "react-icons/si";
 
 import footerlogo from "../img/logo.svg";
@@ -16,6 +16,16 @@ const Footer = ({ dark }) => {
           </p>
         </div>
         <div className="footer__links">
+          <a
+            href="https://wa.me/639506648307"
+            target="_blank"
+          >
+            <BsWhatsapp
+              size={25}
+              color={!dark ? "#606060" : "#fff"}
+              className="icons"
+            />
+          </a>
           <a
             href="https://linkedin.com/in/frank-mendoza-382213207"
             target="_blank"
