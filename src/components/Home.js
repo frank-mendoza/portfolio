@@ -14,8 +14,8 @@ const Home = ({ location, dark }) => {
         </div>
         <div className={!dark ? "home__contents" : "home__contents dark"}>
           <h1 className="home__title ">
-            Hi! <br />
-            I'm Frank
+            Hi! I'm<br />
+             Frank
           </h1>
           <h3 className="home__subtitle">Frontend Developer</h3>
 
