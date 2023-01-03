@@ -26,6 +26,7 @@ import { ref } from "firebase/database";
 
 // @ts-ignore
 import firebaseApp from "./firebase.ts";
+import Background from "./customComponents/Background";
 
 function App() {
   const db = getDatabase(firebaseApp);
@@ -439,6 +440,8 @@ function App() {
           />
         </Routes>
       </Router>
+
+      <Background dark={dark}/>
     </>
   );
 }
