@@ -1,6 +1,5 @@
 import React from "react";
-import { BsMessenger, BsLinkedin, BsSkype, BsWhatsapp } from "react-icons/bs";
-import { SiGmail } from "react-icons/si";
+import Accounts from "../customComponents/Accounts";
 
 import footerlogo from "../img/logo.svg";
 
@@ -15,55 +14,7 @@ const Footer = ({ dark }) => {
             social media accounts.
           </p>
         </div>
-        <div className="footer__links">
-          <a
-            href="https://wa.me/639506648307"
-            target="_blank"
-          >
-            <BsWhatsapp
-              size={25}
-              color={!dark ? "#606060" : "#fff"}
-              className="icons"
-            />
-          </a>
-          <a
-            href="https://linkedin.com/in/frank-mendoza-382213207"
-            target="_blank"
-          >
-            <BsLinkedin
-              size={25}
-              color={!dark ? "#606060" : "#fff"}
-              className="icons"
-            />
-          </a>
-          <a href="https://m.me/fank.mendoza.965580" target="_blank">
-            <BsMessenger
-              size={25}
-              color={!dark ? "#606060" : "#fff"}
-              className="icons"
-            />
-          </a>
-          <a href="https://join.skype.com/invite/xX4Vy6VXFaP0" target="_blank">
-            <BsSkype
-              size={25}
-              color={!dark ? "#606060" : "#fff"}
-              className="icons"
-            />
-          </a>
-          <div
-            style={{ cursor: "pointer" }}
-            onClick={(e) => {
-              e.preventDefault()
-              window.location.href = "mailto:example@email.com";
-            }}
-          >
-            <SiGmail
-              size={25}
-              color={!dark ? "#606060" : "#fff"}
-              className="icons"
-            />
-          </div>
-        </div>
+        <Accounts dark={dark}/>
 
         <span className="footer__copyright">
           Copyright ©2022 All rights reserved

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 
 import { GiHamburgerMenu } from "react-icons/gi";
 import { Link } from "react-router-dom";
-import Button from "../customComponents/Button";
+import Accounts from "../customComponents/Accounts";
 import DarkThemeToggle from "../customComponents/darkThemeToggle";
 
 import navlogo from "../img/logo.svg";
@@ -58,12 +58,6 @@ const Navbar = ({
           </Link>
           <div className="navbar__link-wrapper">
             <ul className="navbar__ul">
-              <li className="custom__switch-wrap">
-                <DarkThemeToggle
-                  toggleChangeTheme={toggleChangeTheme}
-                  dark={dark}
-                />
-              </li>
               <Link
                 to={"/portfolio"}
                 className="navbar__links"
@@ -89,30 +83,36 @@ const Navbar = ({
                 className="navbar__links"
                 onClick={() => scrollToElement(false, about)}
                 style={{
-                  color:props.dark
-                        ? "#fff"
-                        : "#535461"
+                  color: props.dark ? "#fff" : "#535461",
                 }}
               >
                 About
               </Link>
+              {window.location.pathname === "/portfolio/works" ? (
+                <Link
+                  style={{
+                    color: props.dark ? "#fff" : "#535461",
+                  }}
+                  className="navbar__links"
+                  to={"/portfolio"}
+                >
+                  Contact
+                </Link>
+              ) : (
+                <Link
+                  style={{
+                    color: props.dark ? "#fff" : "#535461",
+                  }}
+                  className="navbar__links"
+                  to={"/portfolio#contact"}
+                  onClick={() => scrollToElement(false, contact)}
+                >
+                  Contact
+                </Link>
+              )}
             </ul>
-            {window.location.pathname === "/portfolio/works" ? (
-              <Link
-                className={!dark ? "button" : "button dark"}
-                to={"/portfolio"}
-              >
-                Send Message
-              </Link>
-            ) : (
-              <Button
-                dark={dark}
-                name="Send Message"
-                black={true}
-                onClick={() => scrollToElement(false, contact)}
-              />
-            )}
           </div>
+          <Accounts dark={dark} nav={true} toggleChangeTheme={toggleChangeTheme}/>
           <div className="navbar__icon" onClick={() => openSidebar()}>
             <GiHamburgerMenu color="rgb(247, 185, 71)" size={25} />
           </div>
