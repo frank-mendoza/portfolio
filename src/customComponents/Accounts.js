@@ -4,9 +4,8 @@ import { SiSkypeforbusiness } from "react-icons/si";
 import { AiOutlineLinkedin } from "react-icons/ai";
 import { RiMessengerLine } from "react-icons/ri";
 import { HiOutlineMail } from "react-icons/hi";
-import DarkThemeToggle from "./darkThemeToggle";
 
-const Accounts = ({ dark, nav, toggleChangeTheme, sidenav }) => {
+const Accounts = ({ dark, nav, sidenav }) => {
   const size = () => {
     return nav || sidenav ? 20 : 25;
   };
@@ -30,11 +29,6 @@ const Accounts = ({ dark, nav, toggleChangeTheme, sidenav }) => {
           : "account__links "
       }
     >
-      {nav ? (
-        <div className="custom__switch-wrap">
-          <DarkThemeToggle toggleChangeTheme={toggleChangeTheme} dark={dark} />
-        </div>
-      ) : null}
       <a href="https://wa.me/639506648307" target="_blank">
         <BsWhatsapp size={size()} color={color()} className="icons" />
       </a>

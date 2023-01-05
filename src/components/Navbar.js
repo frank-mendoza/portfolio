@@ -110,9 +110,20 @@ const Navbar = ({
                   Contact
                 </Link>
               )}
+
+              <div className="custom__switch-wrap">
+                <DarkThemeToggle
+                  toggleChangeTheme={toggleChangeTheme}
+                  dark={dark}
+                />
+              </div>
             </ul>
           </div>
-          <Accounts dark={dark} nav={true} toggleChangeTheme={toggleChangeTheme}/>
+          <Accounts
+            dark={dark}
+            nav={true}
+            toggleChangeTheme={toggleChangeTheme}
+          />
           <div className="navbar__icon" onClick={() => openSidebar()}>
             <GiHamburgerMenu color="rgb(247, 185, 71)" size={25} />
           </div>
