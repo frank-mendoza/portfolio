@@ -29,20 +29,20 @@ const Accounts = ({ dark, nav, sidenav }) => {
           : "account__links "
       }
     >
-      <a href="https://wa.me/639506648307" target="_blank">
+      <a href="https://wa.me/639506648307" target="_blank" rel="noreferrer">
         <BsWhatsapp size={size()} color={color()} className="icons" />
       </a>
-      <a href="https://linkedin.com/in/frank-mendoza-382213207" target="_blank">
+      <a href="https://linkedin.com/in/frank-mendoza-382213207" target="_blank" rel="noreferrer">
         <AiOutlineLinkedin
           size={nav || sidenav ? 23 : 28}
           color={color()}
           className="icons"
         />
       </a>
-      <a href="https://m.me/fank.mendoza.965580" target="_blank">
+      <a href="https://m.me/fank.mendoza.965580" target="_blank" rel="noreferrer">
         <RiMessengerLine size={size()} color={color()} className="icons" />
       </a>
-      <a href="https://join.skype.com/invite/xX4Vy6VXFaP0" target="_blank">
+      <a href="https://join.skype.com/invite/xX4Vy6VXFaP0" target="_blank" rel="noreferrer">
         <SiSkypeforbusiness size={size()} color={color()} className="icons" />
       </a>
       <div

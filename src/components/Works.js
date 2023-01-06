@@ -48,6 +48,7 @@ const Works = ({ onActiveTav, ...props }) => {
       key={item.id}
       href={item.link}
       target="_blank"
+      rel="noreferrer"
       className={!props.dark ? "works__item" : "works__item dark"}
       style={{ opacity: !props.loading ? 0 : 1, transition: "ease-in 1s" }}
     >
@@ -88,8 +89,11 @@ const Works = ({ onActiveTav, ...props }) => {
             window.location.pathname === "/portfolio/works" ? "120px" : "",
         }}
       >
-        <h2 className={!props.dark ? "title" : "title dark"}>Works</h2>
+        <h2 data-aos="fade-up" className={!props.dark ? "title" : "title dark"}>
+          Works
+        </h2>
         <div
+          data-aos="fade-up"
           className={
             !props.dark ? "works__tablinks" : "works__tablinks bordered"
           }
@@ -116,6 +120,7 @@ const Works = ({ onActiveTav, ...props }) => {
           </ul>
         </div>
         <div
+          data-aos="fade-up"
           className={
             newRecord.length < 2
               ? "works__container single"

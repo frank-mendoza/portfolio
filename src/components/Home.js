@@ -7,7 +7,7 @@ const Home = ({ location, dark }) => {
   const onButtonClick = () => {};
 
   return (
-    <div className={!dark ? "home" : "home dark"} id="home" ref={location}>
+    <div data-aos='fade-in' className={!dark ? "home" : "home dark"} id="home" ref={location}>
       <div className="home__container">
         <div className="home__hero">
           <img src={hero} alt="" />
@@ -22,6 +22,7 @@ const Home = ({ location, dark }) => {
           <a
             href={pdf}
             target="_blank"
+            rel="noreferrer"
             className={!dark ? "button black" : "button dark"}
             style={{ width: "150px" }}
             onClick={() => onButtonClick()}

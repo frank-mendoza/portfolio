@@ -6,6 +6,7 @@ import hero from "../img/contact.png";
 const Contact = ({ location, onSubmit, change, onChange, dark }) => {
   return (
     <div
+      data-aos='fade-up'
       className={!dark ? "contact " : "contact dark"}
       id="contact"
       ref={location}

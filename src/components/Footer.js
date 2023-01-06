@@ -5,7 +5,7 @@ import footerlogo from "../img/logo.svg";
 
 const Footer = ({ dark }) => {
   return (
-    <footer className="footer ">
+    <footer data-aos='fade-in' className="footer ">
       <div className={!dark ? "footer__container" : "footer__container dark"}>
         <div className="footer__logo">
           <img src={footerlogo} alt="logo" />

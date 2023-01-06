@@ -30,7 +30,7 @@ const About = ({ location, dark }) => {
   const carouselItem = () => {
     return about.map((record) => (
       <SwiperSlide key={record.id}>
-        <div className="about__carousel-img">
+        <div data-aos='fade-up' className="about__carousel-img">
           <img src={record.src} alt={record.name} />
         </div>
       </SwiperSlide>
@@ -38,7 +38,7 @@ const About = ({ location, dark }) => {
   };
 
   const Descriptions = (data) => (
-    <div ref={data.item} className="about__container about__container-center">
+    <div data-aos='fade-up' ref={data.item} className="about__container about__container-center">
       <div className="about__img" style={{ order: data.grid ? 1 : 2 }}>
         <img src={data.src} alt={data.alt} />
       </div>
@@ -55,9 +55,10 @@ const About = ({ location, dark }) => {
   return (
     <div className={!dark ? "wrapper" : "wrapper dark"}>
       <div className="about" id="about" ref={location}>
-        <h2 className={!dark ? "title" : "title dark"}>About</h2>
+        <h2 data-aos='fade-up' className={!dark ? "title" : "title dark"}>About</h2>
         <div className="about__container ">
-          <div
+          <div 
+            data-aos='fade-up'
             className={!dark ? "about__item" : " about__item dark"}
             onClick={() => handleScrollToElement("collab")}
           >
@@ -65,6 +66,7 @@ const About = ({ location, dark }) => {
             <p>Collaborative</p>
           </div>
           <div
+            data-aos='fade-up'
             className={!dark ? "about__item" : " about__item dark"}
             onClick={() => handleScrollToElement("responsive")}
           >
@@ -72,6 +74,7 @@ const About = ({ location, dark }) => {
             <p>Mobile Responsive</p>
           </div>
           <div
+            data-aos='fade-up'
             className={!dark ? "about__item" : " about__item dark"}
             onClick={() => handleScrollToElement("frameworks")}
           >
@@ -108,8 +111,8 @@ const About = ({ location, dark }) => {
           text="With the use of new frameworks and tech, development becomes more exciting and fun."
         />
 
-        <div className="about__carousel">
-          <h2 className={!dark ? "title" : "title dark"}>
+        <div  className="about__carousel">
+          <h2 data-aos='fade-up' className={!dark ? "title" : "title dark"}>
             What I Currently Knew?
           </h2>
           <br />
