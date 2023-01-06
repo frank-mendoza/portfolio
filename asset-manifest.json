@@ -1,7 +1,7 @@
 {
   "files": {
-    "main.css": "/portfolio/static/css/main.761d88ec.css",
-    "main.js": "/portfolio/static/js/main.be5d803f.js",
+    "main.css": "/portfolio/static/css/main.894dc08c.css",
+    "main.js": "/portfolio/static/js/main.150f465f.js",
     "static/media/Frank-Mendoza-CV.pdf": "/portfolio/static/media/Frank-Mendoza-CV.20010f015f6a35da0d2e.pdf",
     "static/media/hero.png": "/portfolio/static/media/hero.5ec07b1de421bf4b1e8f.png",
     "static/media/contact.png": "/portfolio/static/media/contact.2b95d12a4fd1d7ca4e53.png",
@@ -34,11 +34,11 @@
     "static/media/liquid-cheese-dark.svg": "/portfolio/static/media/liquid-cheese-dark.f5f388dc73247ab11e28.svg",
     "static/media/liquid-cheese.svg": "/portfolio/static/media/liquid-cheese.5acbbba089001bab53a1.svg",
     "index.html": "/portfolio/index.html",
-    "main.761d88ec.css.map": "/portfolio/static/css/main.761d88ec.css.map",
-    "main.be5d803f.js.map": "/portfolio/static/js/main.be5d803f.js.map"
+    "main.894dc08c.css.map": "/portfolio/static/css/main.894dc08c.css.map",
+    "main.150f465f.js.map": "/portfolio/static/js/main.150f465f.js.map"
   },
   "entrypoints": [
-    "static/css/main.761d88ec.css",
-    "static/js/main.be5d803f.js"
+    "static/css/main.894dc08c.css",
+    "static/js/main.150f465f.js"
   ]
 }
