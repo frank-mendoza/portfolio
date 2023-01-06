@@ -4,8 +4,8 @@
   font-size: 16px;
   color: $white;
   outline: none;
-  padding: 15px;
-  width: 200px;
+  padding: 10px 20px;
+  width: auto;
   font-weight: 500;
   transition: ease 0.2s;
   text-align: center;
@@ -23,6 +23,14 @@
     }
   }
 
+  &.black {
+    background-color: $text;
+
+    &::before {
+      background-color: #808080;
+    }
+  }
+
   &::before {
     content: '';
     position: absolute;
@@ -36,7 +44,6 @@
   }
   
   &:hover {
-    letter-spacing: 1px;
     &::before {
       transition: ease 0.2s;
       right: -5px;

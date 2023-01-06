@@ -1,14 +1,16 @@
-import React from 'react'
+import React from "react";
 
-const Button = ({ name, dark, onClick }) => (
-  <button
-    className={!dark ? 'button' : 'button dark'}
-    onClick={() =>
-      onClick ?
-        onClick() : null
-    }
-    // style={secondary ? { backgroundColor: '#fff8d9', color: '#535461' } : { backgroundColor: 'rgb(247, 185, 71)', color: '#fff' }}
-  >{name}</button>
-)
+const Button = (props) => {
+  const { name, dark, onClick, black, width } = props;
+  return (
+    <button
+      className={!dark ? (black ? "button black" : "button") : "button dark"}
+      style={{ width: width ? "150px" : "" }}
+      onClick={() => (onClick ? onClick() : null)}
+    >
+      {name}
+    </button>
+  );
+};
 
-export default Button
+export default Button;

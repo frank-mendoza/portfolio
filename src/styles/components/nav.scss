@@ -45,20 +45,19 @@
     list-style: none;
     display: flex;
     align-items: center;
-    gap: 50px;
+    gap: 20px;
     @include mx980 {
       gap: 20px;
     }
   }
 
   &__links {
-    font-size: 20px;
-    color: $white;
+    font-size: 18px;
     font-weight: 600;
     transition: ease 0.2s;
     text-decoration: none;
     @include mx980 {
-      font-size: 18px;
+      font-size: 16px;
     }
 
     &:hover {

@@ -47,17 +47,6 @@
     }
   }
 
-  &__links {
-    display: flex;
-    margin: 20px 0;
-    gap: 20px;
-    justify-content: center;
-    opacity: 0.8;
-    @include sp {
-      gap: 20px;
-    }
-  }
-
   &__copyright {
     font-size: 12px;
     font-weight: 600;

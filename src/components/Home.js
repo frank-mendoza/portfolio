@@ -1,29 +1,39 @@
-import React from 'react'
+import React from "react";
 
-import headerImg from '../img/pexels-miguel-á-padriñán-1591060.jpg'
-import headerWhite from '../img/white.png'
-import { AnimationOnScroll } from 'react-animation-on-scroll';
+import hero from "../img/hero.png";
+import pdf from "../pdf/Frank-Mendoza-CV.pdf"
 
 const Home = ({ location, dark }) => {
+  const onButtonClick = () => {};
 
   return (
-    <div className={dark ? "home" : 'home dark' }id='home' ref={location}>
-      <div className='home__img'>
-        <img src={!dark ? headerWhite : headerImg} alt="pexels-miguel-á-padriñán-1591060" />
-      </div>
-      <AnimationOnScroll
-        className="home__container"
-        initiallyVisible={true}
-        animateIn="animate__fadeIn"
-        animateOnce={true}
-        duration={1}>
-        <div className="home__contents">
-          <h1 className="home__title ">Frank <br />Mendoza</h1>
-          <h3 className="home__subtitle">Frontend Developer</h3>
+    <div data-aos='fade-in' className={!dark ? "home" : "home dark"} id="home" ref={location}>
+      <div className="home__container">
+        <div className="home__hero">
+          <img src={hero} alt="" />
         </div>
-      </AnimationOnScroll>
-    </div>
-  )
-}
+        <div className={!dark ? "home__contents" : "home__contents dark"}>
+          <h1 className="home__title ">
+            Hi! I'm<br />
+             Frank
+          </h1>
+          <h3 className="home__subtitle">Frontend Developer</h3>
 
-export default Home
+          <a
+            href={pdf}
+            target="_blank"
+            rel="noreferrer"
+            className={!dark ? "button black" : "button dark"}
+            style={{ width: "150px" }}
+            onClick={() => onButtonClick()}
+            download
+          >
+            Donwload CV
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default Home;

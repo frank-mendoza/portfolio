@@ -1,0 +1,23 @@
+.account__links {
+    display: flex;
+    margin: 20px 0;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    opacity: 0.8;
+    @include sp {
+      gap: 20px;
+    }
+
+    &.nav {
+        margin: 0;
+        @include sp {
+            display: none;
+        }
+    }
+
+    &.sidenav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+  }

@@ -6,6 +6,7 @@ import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/effect-fade";
 import "animate.css/animate.min.css";
+import Aos from "aos";
 
 import "./styles/main.scss";
 
@@ -26,6 +27,7 @@ import { ref } from "firebase/database";
 
 // @ts-ignore
 import firebaseApp from "./firebase.ts";
+import Background from "./customComponents/Background";
 
 function App() {
   const db = getDatabase(firebaseApp);
@@ -101,6 +103,10 @@ function App() {
     setLoader(false);
     setSuccess(false);
     setError(false);
+
+    Aos.init({
+      duration: 400, // values from 0 to 3000, with step 50ms
+    });
   }, [getDark]);
 
   const onDarkTheme = () => {
@@ -439,6 +445,8 @@ function App() {
           />
         </Routes>
       </Router>
+
+      <Background dark={dark}/>
     </>
   );
 }
