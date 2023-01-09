@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.aa2b1060.css",
-    "main.js": "/portfolio/static/js/main.5cb68b49.js",
+    "main.js": "/portfolio/static/js/main.146b7da3.js",
     "static/media/hero.png": "/portfolio/static/media/hero.5ec07b1de421bf4b1e8f.png",
     "static/media/contact.png": "/portfolio/static/media/contact.2b95d12a4fd1d7ca4e53.png",
     "static/media/Frank-Mendoza-CV.pdf": "/portfolio/static/media/Frank-Mendoza-CV.87620083a485f5ececa0.pdf",
@@ -35,10 +35,10 @@
     "static/media/liquid-cheese.svg": "/portfolio/static/media/liquid-cheese.5acbbba089001bab53a1.svg",
     "index.html": "/portfolio/index.html",
     "main.aa2b1060.css.map": "/portfolio/static/css/main.aa2b1060.css.map",
-    "main.5cb68b49.js.map": "/portfolio/static/js/main.5cb68b49.js.map"
+    "main.146b7da3.js.map": "/portfolio/static/js/main.146b7da3.js.map"
   },
   "entrypoints": [
     "static/css/main.aa2b1060.css",
-    "static/js/main.5cb68b49.js"
+    "static/js/main.146b7da3.js"
   ]
 }
